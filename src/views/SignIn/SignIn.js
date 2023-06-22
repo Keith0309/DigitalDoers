@@ -6,8 +6,6 @@ const SignIn = () => {
       <div className="row">
         <div className="col-md-12">
           <h1>SignIn PAge</h1>
-          <h1>SignIn PAge</h1>
-          <h1>SignIn PAge</h1>
         </div>
       </div>
     </DefaultLayout>
