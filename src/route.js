@@ -5,8 +5,8 @@ import SignUp from "./views/SignUp/SignUp";
 
 const routes = createBrowserRouter([
   { path: "/", element: <Home /> },
-  { path: "/SignIn", element: <SignIn /> },
-  { path: "/SignUp", element: <SignUp /> },
+  { path: "/signin", element: <SignIn /> },
+  { path: "/signup", element: <SignUp /> },
 ]);
 
 export default routes;

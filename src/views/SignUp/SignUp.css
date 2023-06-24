@@ -1,0 +1,9 @@
+.text_link {
+    font-size: 15px;
+    text-align: right;
+}
+
+.signin_link {
+    text-decoration: none;
+    color: #598201;
+}
