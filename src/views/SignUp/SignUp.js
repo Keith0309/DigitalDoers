@@ -26,10 +26,10 @@ const handleSubmit = (event) => {
   // Find user login info
   // const userData = database.find((user) => user.username === uname.value);
 
-  var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+  // var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
 
   // Compare user info
-  if (!email.value.match(mailformat)) {
+  if (email.value.includes("@" && ".com")) {
     alert(email.value);
     if (pass.value !== passmatch.value) {
       // Invalid password
@@ -55,7 +55,7 @@ const renderForm = (
     <form onSubmit={handleSubmit}>
       <div className="input-container">
         <label className="fw-bold">Email Address </label>
-        <input placeholder=" email@youremail.com" type="email" name="email" required />
+        <input placeholder=" email@youremail.com" type="text" name="email" required />
         {renderErrorMessage("email")}
       </div>
       <div className="input-container">
