@@ -1,4 +1,6 @@
+import Footer from "../../components/Footer/Footer";
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
+
 
 const Home = () => {
   return (
@@ -8,7 +10,9 @@ const Home = () => {
           <h1>Home</h1>
         </div>
       </div>
+    <Footer />
     </DefaultLayout>
+    
   );
 };
 

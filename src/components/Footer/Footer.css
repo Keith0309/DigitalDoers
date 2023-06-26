@@ -1,0 +1,23 @@
+.i {
+  color: rgb(112, 182, 112);
+  cursor: pointer;
+}
+.ic {
+  color: rgb(112, 182, 112);
+}
+.i:hover {
+  color: green;
+}
+.social {
+  padding-top: 250px;
+}
+.flink {
+  cursor: pointer;
+  font-size: 13px;
+}
+.arr {
+  font-size: 13px;
+}
+.end-footer {
+  height: 40px;
+}
