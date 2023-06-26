@@ -35,7 +35,7 @@ const Footer = () => {
                   <h6>Landline: 8-531-9001 Loc 309</h6>
                   <h6>Email: wepu@ncmbh.gov.ph</h6>
                 </div>
-                <div className="border-bottom border-2 border-success pb-4">
+                <div>
                   <h4>Forensic Unit</h4>
                   <h6>Landline: 8-531-9001 Loc 320</h6>
                   <h6>Email: ncmhforensic@gmail.com</h6>
