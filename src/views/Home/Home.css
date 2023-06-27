@@ -1,0 +1,52 @@
+.category-table {
+    margin: 100px auto;
+}
+
+.category-item {
+    width: 200px;
+    height: 150px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: -2px 2px 4px black;
+}
+
+.category_link {
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    top: 100px;
+    margin: 0 15px;
+
+}
+
+.pharmacy {
+    background-image: url('../../assets/images/category_backgrounds/pharmacy.jpg');
+    background-size: cover;
+}
+
+.medicine_health {
+    background-image: url('../../assets/images/category_backgrounds/medicine&health.jpg');
+    background-size: cover;
+}
+
+.vitamins_supplements {
+    background-image: url('../../assets/images/category_backgrounds/vitamins&supplements.jpg');
+    background-size: cover;
+}
+
+.nutrition_fitness {
+    background-image: url('../../assets/images/category_backgrounds/nutrtion&fitness.jpg');
+    background-size: cover;
+}
+
+.sexual_health {
+    background-image: url('../../assets/images/category_backgrounds/sexual health.jpg');
+    background-size: cover;
+}
+
+.allcategories {
+    background-image: url('../../assets/images/category_backgrounds/viewcategories.jpg');
+    background-size: cover;
+}
