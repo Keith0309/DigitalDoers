@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="container-fluid fixed-bottom border-top border-2 border-black">
+    <div className="container-fluid border-top border-2 border-black mt-5">
       <div className="container">
         <div className="row">
           <div className="col-md-6 p-4">
@@ -85,7 +85,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="end-footer container bg-success">
-        <div className="row pt-2">
+        <div className="row pt-3">
           <div className="col-md-9">
             <div className="d-flex">
               <p className="flink text-white border-end border-2 px-3 text-decoration-underline">
