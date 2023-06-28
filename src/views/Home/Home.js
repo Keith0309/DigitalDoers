@@ -7,8 +7,31 @@ import pharma_banner_2 from "../../assets/images/pharma_banner_2.webp"
 import pharma_banner_3 from "../../assets/images/pharma_banner_3.jpg"
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 
 const Home = () => {
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
   const slides = [
     {url: pharma_banner, title: 'image1'},
@@ -34,7 +57,7 @@ const Home = () => {
         <ImageSlider slides={slides}/>
       </div>
 
-      <table className="category-table">
+      {/* <table className="category-table">
         <tr className="d-flex">
             
             <Link className="category_link pharmacy" to="/pharmacy">
@@ -52,18 +75,47 @@ const Home = () => {
             <Link className="category_link nutrition_fitness" to="/nutritions&fitness align">
               <td className="category-item text-center align-middle">Nutrition &<br></br>Fitness</td>
             </Link>
-          
-            <Link className="category_link sexual_health" to="/sexualhealth">
-              <td className="category-item text-center align-middle">Sexual<br></br>Health</td>
-            </Link>
                     
-            <Link className="category_link allcategories" to="/allcategories">
-              <td className="category-item text-center align-middle"> View All<br></br>Categories</td>
+            <Link className="category_link allcategories" to="/shopall">
+              <td className="category-item text-center align-middle"> Shop<br></br>All</td>
             </Link>
-              
               
         </tr>
-      </table> 
+      </table>  */}
+
+
+      <Carousel responsive={responsive}>
+            <Link className="category_link  " to="/pharmacy">
+            <div className="d-flex align-items-center justify-content-center category-item mx-auto pharmacy ">
+                <h2>Pharmacy</h2>
+            </div>
+            </Link>
+
+            <Link className="category_link" to="/medicine_health">
+            <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center medicine_health">
+              <h2>Medicine &<br></br>Health</h2>
+            </div>
+            </Link>
+
+            <Link className="category_link" to="/vitamins_supplements">
+            <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center vitamins_supplements">
+              <h2>Vitamins & <br></br> Supplements</h2>
+            </div>
+            </Link>
+
+            <Link className="category_link" to="/nutrition_fitness">
+            <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center nutrition_fitness">
+              <h2>Nutrition &<br></br>Fitness</h2>
+            </div>
+            </Link>
+
+            <Link className="category_link" to="/shopall">
+            <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center shopall">
+              <h2>Shop<br></br>All</h2>
+            </div>
+            </Link>
+      </Carousel>
+
       <Footer />
     </DefaultLayout>
   );

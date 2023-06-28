@@ -1,24 +1,29 @@
-.category-table {
-    margin: 100px auto;
+.react-multi-carousel-list  {
+    margin: 80px auto;
+}
+.react-multi-carousel-track {
+    flex-direction: none;
 }
 
+/* .react-multi-carousel-item {
+    flex: 1 1 auto;
+    position: relative;
+    width: 432px !important;
+    margin: 0 10px;
+} */
+
 .category-item {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.category_link {
+    text-decoration: none;
     font-size: 25px;
     font-weight: bolder;
     color: white;
     text-shadow: -2px 2px 4px black;
-}
-
-.category_link {
-    border: 1px solid black;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 20px;
-    top: 100px;
-    margin: 0 15px;
-
 }
 
 .pharmacy {
@@ -41,12 +46,7 @@
     background-size: cover;
 }
 
-.sexual_health {
-    background-image: url('../../assets/images/category_backgrounds/sexual health.jpg');
-    background-size: cover;
-}
-
-.allcategories {
+.shopall {
     background-image: url('../../assets/images/category_backgrounds/viewcategories.jpg');
     background-size: cover;
 }
