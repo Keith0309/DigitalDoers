@@ -15,3 +15,15 @@
 .carousel-indicators [data-bs-target] {
     background-color: black;
 }
+
+.first-banner { 
+    background-color: aquamarine;
+}
+
+.second-banner { 
+    background-color: blanchedalmond;
+}
+
+.third-banner {
+    background-color: beige;
+}

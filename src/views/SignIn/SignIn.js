@@ -88,6 +88,17 @@ const renderForm = (
 
   return (
     <DefaultLayout>
+
+    {/* Home > Pharmacy */}
+    <div className="d-flex directory-div mt-2 py-1 ">
+        <p className="directory-text d-flex ms-4 mt-2 fw-bold">
+      <Link className="directory_link " to="/">
+          Home
+      </Link>
+      <i class="bi bi-chevron-right"></i> Sign In
+      </p>
+    </div>
+
       <div className="row">
         {/* <div className="col-md-12">
           <h1>SignIn PAge</h1>

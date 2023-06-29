@@ -93,15 +93,26 @@ const renderForm = (
 
   return (
     <DefaultLayout>
+
+    {/* Home > Pharmacy */}
+    <div className="d-flex directory-div mt-2 py-1 ">
+        <p className="directory-text d-flex ms-4 mt-2 fw-bold">
+      <Link className="directory_link " to="/">
+          Home
+      </Link>
+      <i class="bi bi-chevron-right"></i> Create Account
+      </p>
+    </div>
+
       <div className="row">
         {/* <div className="col-md-12">
           <h1>SignUp PAge</h1>
         </div> */}
 
-        <div className="signin-form mx-auto">
+        <div className="signup-form mx-auto">
             <div className="login-form mx-auto" >
               <div className="nchm-container text-center" ><img className="ncmh-logo" src={nchm_logo} alt="ncmh_logo"></img></div>
-              <div className="signin-text text-center fw-bolder my-3">Create your account</div>
+              <div className="signup-text text-center fw-bolder my-3">Create your account</div>
               {isAccountCreated ? <div className="text-center">You have successfully created an account!</div> : renderForm}
             </div>
           </div>

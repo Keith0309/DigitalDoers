@@ -1,35 +1,37 @@
 import './ImageSlider.css'
 import Carousel from 'react-bootstrap/Carousel'
-import pharma_banner from "../../assets/images/pharma_banner.webp"
-import pharma_banner2 from "../../assets/images/pharma_banner_2.webp"
-import pharma_banner3 from "../../assets/images/pharma_banner_3.jpg"
+import pharma_banner from "../../assets/images/banner-1.png"
+import pharma_banner2 from "../../assets/images/banner-2.png"
+import pharma_banner3 from "../../assets/images/banner-3.png"
 
 const ImageSlider = () => {
 
     return (
         <Carousel>
           <Carousel.Item>
+            <div>
             <img
-              className="announce-promo d-block w-100"
+              className="first-banner announce-promo d-block w-100"
               src={pharma_banner}
-              alt="First slide"
-            />
+              alt="first-banner"
+            ></img>
+            </div>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              className="announce-promo d-block w-100"
+              className="second-banner announce-promo d-block w-100"
               src={pharma_banner2}
-              alt="Second slide"
-            />
+              alt="second banner"
+            ></img>
           </Carousel.Item>
 
           <Carousel.Item>
             <img
-              className="announce-promo d-block w-100"
+              className="third-banner announce-promo d-block w-100"
               src={pharma_banner3}
-              alt="Third slide"
-            />
+              alt="third-banner"
+            ></img>
           </Carousel.Item>
         </Carousel>
       );

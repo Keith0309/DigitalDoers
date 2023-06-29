@@ -18,3 +18,16 @@
 .Create-btn:hover {
   text-decoration: underline;
 }
+
+.directory-div { 
+  background-color: #f8f9fa;
+}
+
+.directory-text {
+  font-size: 20px;
+}
+
+.directory_link {
+  text-decoration: none;
+  color: #3e7ba4
+}

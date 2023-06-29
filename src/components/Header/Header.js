@@ -20,7 +20,7 @@ const Header = () => {
                   alt="menu"
                   draggable="false"
                 ></img>
-                <p className="menu_text">Menu</p>
+                {/* <p className="menu_text">Menu</p> */}
               </button>
             </div>
             <div>
@@ -44,11 +44,15 @@ const Header = () => {
               </Link>
             </div>
 
+
+          {/* Search Bar */}
             <div className="search_bar align-items-center">
+              {/* <div className="col-sm-2"></div> */}
               <input
                 className="search_input"
-                placeholder="Search medicines"
-              ></input>
+                placeholder="Search medicines">
+              </input>
+
               <button className="search_button">
                 <img
                   className="search_icon"
@@ -61,13 +65,12 @@ const Header = () => {
 
             <div className="d-flex align-items-center">
               <div>
-                <Link className="text_link" to="/signin">
+                <Link className="signin_link_header py-1 px-4 me-2" to="/signin">
                   Login
                 </Link>
               </div>
-              <div className="divider"></div>
               <div>
-                <Link className="text_link" to="/signup">
+                <Link className="signup_link_header" to="/signup">
                   Create Account
                 </Link>
               </div>

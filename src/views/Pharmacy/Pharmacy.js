@@ -1,12 +1,25 @@
 import Footer from "../../components/Footer/Footer";
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import "./Pharmacy.css";
+import { Link } from "react-router-dom";
 
 const Pharmacy = () => {
   return (
     <DefaultLayout>
-      <div className="container mt-5 p-4 border border-2 border-black">
-        <h3 className="fw-bold">Welcome to NCMH Pharmacy!</h3>
+
+    {/* Home > Pharmacy */}
+    <div className="d-flex directory-div mt-2 py-1 ">
+        <p className="directory-text d-flex ms-4 mt-2 fw-bold">
+      <Link className="directory_link " to="/">
+          Home
+      </Link>
+      <i class="bi bi-chevron-right"></i> Pharmacy
+      </p>
+    </div>
+
+  {/* Please delete code below and change to products page */}
+      <div className="container mt-2 p-4 border border-2 border-black">
+              <h3 className="fw-bold">Welcome to NCMH Pharmacy!</h3>
         <p>
           Sign in or create an account to refill, transfer, and manage your
           prescriptions from your history.
@@ -64,6 +77,7 @@ const Pharmacy = () => {
           <div className="col-md-2"></div>
         </div>
       </div>
+
       <Footer />
     </DefaultLayout>
   );
