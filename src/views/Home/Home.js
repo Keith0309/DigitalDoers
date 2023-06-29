@@ -85,33 +85,33 @@ const Home = () => {
 
 
       <Carousel responsive={responsive}>
-            <Link className="category_link  " to="/pharmacy">
+            <Link className="category_link" to="/pharmacy">
             <div className="d-flex align-items-center justify-content-center category-item mx-auto pharmacy ">
-                <h2>Pharmacy</h2>
+                <h1>Pharmacy</h1>
             </div>
             </Link>
 
             <Link className="category_link" to="/medicine_health">
             <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center medicine_health">
-              <h2>Medicine &<br></br>Health</h2>
+              <h1>Medicine &<br></br>Health</h1>
             </div>
             </Link>
 
             <Link className="category_link" to="/vitamins_supplements">
             <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center vitamins_supplements">
-              <h2>Vitamins & <br></br> Supplements</h2>
+              <h1>Vitamins & <br></br> Supplements</h1>
             </div>
             </Link>
 
             <Link className="category_link" to="/nutrition_fitness">
             <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center nutrition_fitness">
-              <h2>Nutrition &<br></br>Fitness</h2>
+              <h1>Nutrition &<br></br>Fitness</h1>
             </div>
             </Link>
 
             <Link className="category_link" to="/shopall">
             <div className="d-flex align-items-center justify-content-center category-item mx-auto text-center shopall">
-              <h2>Shop<br></br>All</h2>
+              <h1>Shop<br></br>All</h1>
             </div>
             </Link>
       </Carousel>
