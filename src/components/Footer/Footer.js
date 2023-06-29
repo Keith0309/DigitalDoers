@@ -2,7 +2,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="bb container-fluid border-top border-3 mt-5">
+    <div className="bb container-fluid border-top border-3 mt-5 mx-0">
       <div className="container">
         <div className="row">
           <div className="col-md-6 p-4">
@@ -63,11 +63,15 @@ const Footer = () => {
               </div>
               <div className="col-md-11">
                 <h5 className="fw-bolder">Location</h5>
-                <h6 className="mb-3">Nueve de Pebrero St., Brgy. Mauway, Mandaluyong City</h6>
+                <h6 className="mb-3">
+                  Nueve de Pebrero St., Brgy. Mauway, Mandaluyong City
+                </h6>
                 <h5 className="fw-bolder">Email</h5>
                 <h6 className="mb-3">mcc@ncmh.gov.ph (Office of the MCC)</h6>
                 <h5 className="fw-bolder">Trunk Line</h5>
-                <h6 className="mb-3">(02) 8531 9001 (Connecting all Departments)</h6>
+                <h6 className="mb-3">
+                  (02) 8531 9001 (Connecting all Departments)
+                </h6>
                 <h5 className="fw-bolder">Website</h5>
                 <h6 className="text-decoration-underline">
                   https://ncmh.gov.ph
@@ -81,29 +85,6 @@ const Footer = () => {
                 <i class="i bi bi-linkedin fs-2 p-4"></i>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="end-footer container bg-success">
-        <div className="row pt-3">
-          <div className="col-md-9">
-            <div className="d-flex">
-              <p className="flink text-white border-end border-2 px-3 text-decoration-underline">
-                Terms And Conditions
-              </p>
-              <p className="flink text-white border-end border-2 px-3 text-decoration-underline">
-                Privacy
-              </p>
-              <p className="flink text-white border-end border-2 px-3 text-decoration-underline">
-                Accessibility
-              </p>
-              <p className="flink text-white px-3 text-decoration-underline">
-                Do Not Sell or Share My Personal Information
-              </p>
-            </div>
-          </div>
-          <div className="col-md-3 text-end">
-            <p className="arr text-white">© 2023 NCMH. All rights reserved.</p>
           </div>
         </div>
       </div>
