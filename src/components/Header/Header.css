@@ -8,7 +8,8 @@
 .menu_icon { height: 40px; }
 .menu_text { margin-bottom: 0; }
 
-.ncmh_logo { height: 75px; }
+.ncmh_logo, .ncmh_pharma { height: 75px; }
+
 
 .search_bar { border: 1px solid black; border-radius: 10px;}
 .search_input { width: 25vw; height: 40px; background: transparent; border: none;}
@@ -28,4 +29,5 @@
 }
 
 .cart_icon { height: 20px; }
+
 

@@ -2,9 +2,9 @@ import Header from "../../Header/Header";
 
 const DefaultLayout = ({ children }) => {
   return (
-    <div>
+    <div >
       <Header />
-      <div>{children}</div>
+      <div className="container">{children}</div>
     </div>
   );
 };

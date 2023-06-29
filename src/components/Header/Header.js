@@ -4,6 +4,7 @@ import burger_menu from "../../assets/images/hamburger_icon.svg.png";
 import ncmh_logo from "../../assets/images/ncmh_logo.png";
 import cart_icon from "../../assets/images/cart-shopping-solid.svg";
 import search_icon from "../../assets/images/magnifying-glass-solid.svg";
+import ncmh_pharma from "../../assets/images/ncmh_pharmacy.png"
 
 const Header = () => {
   return (
@@ -22,12 +23,21 @@ const Header = () => {
                 <p className="menu_text">Menu</p>
               </button>
             </div>
-
             <div>
               <Link className="ncmh_link" to="/">
                 <img
                   className="ncmh_logo"
                   src={ncmh_logo}
+                  alt="menu"
+                  draggable="false"
+                ></img>
+              </Link>
+            </div>
+            <div>
+              <Link className="ncmh_link" to="/pharmacy">
+                <img
+                  className="ncmh_pharma"
+                  src={ncmh_pharma}
                   alt="menu"
                   draggable="false"
                 ></img>

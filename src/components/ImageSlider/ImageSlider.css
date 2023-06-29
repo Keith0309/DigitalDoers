@@ -1,0 +1,17 @@
+.announce-promo {
+    height: 490px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("../../assets/images/chevron-left-solid.svg");
+}
+
+.carousel-control-next-icon {
+    background-image: url("../../assets/images/chevron-right-solid.svg");
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: black;
+}

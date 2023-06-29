@@ -1,0 +1,52 @@
+.react-multi-carousel-list  {
+    margin: 80px auto;
+}
+.react-multi-carousel-track {
+    flex-direction: none;
+}
+
+/* .react-multi-carousel-item {
+    flex: 1 1 auto;
+    position: relative;
+    width: 432px !important;
+    margin: 0 10px;
+} */
+
+.category-item {
+    width: 400px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.category_link {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: -2px 2px 4px black;
+}
+
+.pharmacy {
+    background-image: url('../../assets/images/category_backgrounds/pharmacy.jpg');
+    background-size: cover;
+}
+
+.medicine_health {
+    background-image: url('../../assets/images/category_backgrounds/medicine&health.jpg');
+    background-size: cover;
+}
+
+.vitamins_supplements {
+    background-image: url('../../assets/images/category_backgrounds/vitamins&supplements.jpg');
+    background-size: cover;
+}
+
+.nutrition_fitness {
+    background-image: url('../../assets/images/category_backgrounds/nutrtion&fitness.jpg');
+    background-size: cover;
+}
+
+.shopall {
+    background-image: url('../../assets/images/category_backgrounds/viewcategories.jpg');
+    background-size: cover;
+}
