@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./SignIn.css"
 import nchm_logo from "../../assets/images/ncmh_logo.png"
 import { Link } from "react-router-dom";
+import Footer2 from "../../components/Footer2/Footer2";
 
 
 
@@ -113,6 +114,8 @@ const renderForm = (
           </div>
 
       </div>
+
+      <Footer2 />
     </DefaultLayout>
   );
 };
