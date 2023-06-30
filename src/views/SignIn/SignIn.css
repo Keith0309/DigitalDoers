@@ -1,17 +1,6 @@
-/* .app {
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    height: 100vh;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: #f8f9fd;
-  } */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
-
-  .ncmh-logo {
+.ncmh-logo {
     height: 150px;
   }
 
@@ -21,6 +10,7 @@
     border-radius: 20px;
     margin: 50px auto; 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Rubik', sans-serif;
   }
 
   .login-form {
@@ -87,7 +77,7 @@
     gap: 8px;
     margin: 10px;
   }
-.signup_link {
+.signup_link, .forgot_pass {
     text-decoration: none;
     color: #2680eb;
 }

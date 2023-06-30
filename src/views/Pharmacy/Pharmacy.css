@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 .Signin-btn {
   background-color: #6ea101;
   color: white;
@@ -25,6 +27,8 @@
 
 .directory-text {
   font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  
 }
 
 .directory_link {

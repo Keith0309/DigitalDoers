@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import "./cart_page.css"
 import product_01 from "../../assets/images/cart_products/product_01.png"
 import product_02 from "../../assets/images/cart_products/product_02.png"
+import Counter from "./counter.js"
+import RemoveButton from "./remove.js"
 
 const Cart = ()=> {
-
 
     return (
         <DefaultLayout >
@@ -38,18 +39,25 @@ const Cart = ()=> {
                     <td><img className="product_image" src={product_01} alt="product-01"></img></td>
                     <td>Ibuprofen</td>
                     <td>P55.00</td>
-                    <td>- 1 +</td>
+                    <td><Counter /></td>
                     <td>P55.00</td>
-                    <td>x</td>
+                    <td> <RemoveButton /></td>
                     </tr>
-                    
                     <tr>
                     <td><img className="product_image" src={product_02} alt="product-01"></img></td>
                     <td>Bioderma</td>
                     <td>P55.00</td>
-                    <td>- 1 +</td>
+                    <td>
+                    <div>
+                        {/* <h3>{item.name}</h3>
+                        <p>Price: ${item.price}</p> */}
+                        <Counter />
+                    </div>
+                    </td>
                     <td>P55.00</td>
-                    <td>x</td>
+                    <td>
+                        <RemoveButton />
+                    </td>
                     </tr>
                 </tbody>
             </table>
@@ -58,5 +66,6 @@ const Cart = ()=> {
         </DefaultLayout>
     )
 }
+
 
 export default Cart;

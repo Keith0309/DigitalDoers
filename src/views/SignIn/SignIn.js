@@ -82,6 +82,11 @@ const renderForm = (
          Create one!
         </Link>
       </p>
+      <p>
+      <Link className="forgot_pass fw-bold"to="/forgot_pass">
+         Forgot password?
+        </Link>
+      </p>
     </div>
   </div>
 );

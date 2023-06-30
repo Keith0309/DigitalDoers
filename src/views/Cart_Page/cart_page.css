@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 .directory-div { 
     background-color: #f8f9fa;
 }
@@ -16,6 +18,7 @@
 .cart-table, .cart-header, td, th {
   border: 1px solid black;
   text-align: center;
+  font-family: 'Rubik', sans-serif;;
 }
 th { 
   height: 50px;

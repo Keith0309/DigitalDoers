@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
 .text_link {
     font-size: 15px;
     text-align: right;
@@ -27,4 +30,5 @@
     border-radius: 20px;
     margin: 50px auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Rubik', sans-serif;
   }

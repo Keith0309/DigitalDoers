@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
-import burger_menu from "../../assets/images/hamburger_icon.svg.png";
+// import burger_menu from "../../assets/images/hamburger_icon.svg.png";
 import ncmh_logo from "../../assets/images/ncmh_logo.png";
 import cart_icon from "../../assets/images/cart-shopping-solid.svg";
 import search_icon from "../../assets/images/magnifying-glass-solid.svg";
@@ -12,7 +12,7 @@ const Header = () => {
       <div className="header mx-auto ">
         <nav className="navbar navbar-expand-lg text-black">
           <div className="container">
-            <div>
+            {/* <div>
               <button className="menu_button">
                 <img
                   className="menu_icon"
@@ -20,9 +20,9 @@ const Header = () => {
                   alt="menu"
                   draggable="false"
                 ></img>
-                {/* <p className="menu_text">Menu</p> */}
+                <p className="menu_text">Menu</p>
               </button>
-            </div>
+            </div> */}
             <div>
               <Link className="ncmh_link" to="/">
                 <img
@@ -32,9 +32,9 @@ const Header = () => {
                   draggable="false"
                 ></img>
               </Link>
-            </div>
-            <div>
-              <Link className="ncmh_link" to="/pharmacy">
+            {/* </div>
+            <div> */}
+              <Link className="pharma_link" to="/pharmacy">
                 <img
                   className="ncmh_pharma"
                   src={ncmh_pharma}

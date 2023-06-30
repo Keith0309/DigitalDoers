@@ -1,16 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
 .react-multi-carousel-list  {
     margin: 65px auto;
 }
 .react-multi-carousel-track {
     flex-direction: none;
 }
-
-/* .react-multi-carousel-item {
-    flex: 1 1 auto;
-    position: relative;
-    width: 432px !important;
-    margin: 0 10px;
-} */
 
 .category-item {
     width: 400px;
@@ -70,4 +65,25 @@
 .carousel-indicators [data-bs-target] {
     width: 35px!important;
     height: 6px!important;
+}
+
+/* Best Sellers */
+.best-sellers > h1 { 
+    font-size: 48px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    margin: 10px auto
+}
+
+.best-sellers-text { 
+    border-bottom: 1px solid black;
+}
+.product_link { 
+    text-decoration: none;
+    color: black
+}
+
+.product_link:hover { 
+    text-decoration: underline;
+    color: black
 }
