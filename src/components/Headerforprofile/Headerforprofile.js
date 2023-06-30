@@ -62,28 +62,34 @@ const Headerforprofile = () => {
                 ></img>
               </button>
             </div>
-
             <div className="d-flex align-items-center">
               <div>
-                Hi,
-                <Link
-                  className="signin_link_header py-1 px-2 text-decoration-underline"
-                  to="/profile"
-                >
-                  David
-                </Link>
-              </div>
-              <div class="btn-group">
                 <Dropdown>
-                  <Dropdown.Toggle className="bg-white text-black border-0 dropdown-toggle-split" />
+                  <Dropdown.Toggle className="bg-white text-black border-0 dropdown-toggle-split">
+                    Hi,
+                    <Link
+                      className="signin_link_header py-1 px-2 text-decoration-underline"
+                      to="/profile"
+                    >
+                      David
+                    </Link>
+                  </Dropdown.Toggle>
                   <Dropdown.Menu className="dropdown-menu">
                     <Dropdown.Item className="text-decoration-underline">
-                    <Link className="signin_link_header py-1 px-2" to="/editprofile">
+                      <Link
+                        className="signin_link_header py-1 px-2"
+                        to="/editprofile"
+                      >
                         Edit Profile
-                    </Link>
+                      </Link>
                     </Dropdown.Item>
                     <Dropdown.Item className="text-decoration-underline">
-                      Logout
+                      <Link
+                        className="signin_link_header py-1 px-2"
+                        to="/"
+                      >
+                        Logout
+                      </Link>
                     </Dropdown.Item>
                   </Dropdown.Menu>
                 </Dropdown>

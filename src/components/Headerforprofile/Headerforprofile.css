@@ -38,4 +38,6 @@
 
 .cart_icon { height: 20px; }
 
-
+.dropdown-item:active {
+    background-color: whitesmoke;
+  }
