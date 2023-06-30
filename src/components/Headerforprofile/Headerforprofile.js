@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Headerforprofile.css";
-import burger_menu from "../../assets/images/hamburger_icon.svg.png";
+//import burger_menu from "../../assets/images/hamburger_icon.svg.png";
 import ncmh_logo from "../../assets/images/ncmh_logo.png";
 import cart_icon from "../../assets/images/cart-shopping-solid.svg";
 import search_icon from "../../assets/images/magnifying-glass-solid.svg";
