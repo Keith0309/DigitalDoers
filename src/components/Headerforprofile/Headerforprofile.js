@@ -78,7 +78,9 @@ const Headerforprofile = () => {
                   <Dropdown.Toggle className="bg-white text-black border-0 dropdown-toggle-split" />
                   <Dropdown.Menu className="dropdown-menu">
                     <Dropdown.Item className="text-decoration-underline">
-                      Edit Profile
+                    <Link className="signin_link_header py-1 px-2" to="/editprofile">
+                        Edit Profile
+                    </Link>
                     </Dropdown.Item>
                     <Dropdown.Item className="text-decoration-underline">
                       Logout

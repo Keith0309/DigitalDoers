@@ -16,6 +16,9 @@ const Profile = () => {
           </p>
         </div>
       </div>
+      <div className="container">
+        <h1 className="text-center fw-bold my-5">Your Profile</h1>
+      </div>
       <div className="container mt-2 mb-5 p-4 border-top border-2 border-black">
         <div className="row mt-4 mb-5">
           <div className="col-md-2"></div>
