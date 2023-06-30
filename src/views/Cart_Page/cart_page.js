@@ -12,6 +12,7 @@ const Cart = ()=> {
         <DefaultLayout >
 
             {/* Home > Pharmacy */}
+            <div className="container">
             <div className="d-flex directory-div mt-2 py-1 ">
                 <p className="directory-text d-flex ms-4 mt-2 fw-bold">
             <Link className="directory_link " to="/">
@@ -53,6 +54,7 @@ const Cart = ()=> {
                     </tr>
                 </tbody>
             </table>
+            </div>
             </div>
             <Footer/>
         </DefaultLayout>

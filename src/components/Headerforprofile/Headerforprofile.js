@@ -77,7 +77,7 @@ const Headerforprofile = () => {
                   <Dropdown.Menu className="dropdown-menu">
                     <Dropdown.Item className="text-decoration-underline">
                       <Link
-                        className="signin_link_header py-1 px-2"
+                        className="signin_link_header py-1"
                         to="/editprofile"
                       >
                         Edit Profile
@@ -85,7 +85,7 @@ const Headerforprofile = () => {
                     </Dropdown.Item>
                     <Dropdown.Item className="text-decoration-underline">
                       <Link
-                        className="signin_link_header py-1 px-2"
+                        className="signin_link_header py-1"
                         to="/"
                       >
                         Logout
