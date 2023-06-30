@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./cart_page.css"
 import product_01 from "../../assets/images/cart_products/product_01.png"
 import product_02 from "../../assets/images/cart_products/product_02.png"
+import Footer2 from "../../components/Footer2/Footer2";
 
 const Cart = ()=> {
 
@@ -57,6 +58,7 @@ const Cart = ()=> {
             </div>
             </div>
             <Footer/>
+            <Footer2/>
         </DefaultLayout>
     )
 }
