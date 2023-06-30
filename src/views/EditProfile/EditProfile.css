@@ -1,0 +1,8 @@
+.edit-btn {
+    background-color: rgb(183, 250, 183);
+}
+.edit-btn:hover {
+    box-shadow: 2px 4px 8px grey;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
