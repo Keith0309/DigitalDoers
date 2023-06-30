@@ -1,22 +1,26 @@
 .bg-box {
-    background-color: rgb(183, 250, 183);
+  background-color: rgb(183, 250, 183);
 }
 .bg-box:hover {
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .profile-box {
-    background-color: rgb(183, 250, 183);
+  background-color: rgb(183, 250, 183);
 }
 .upload-btn {
-    background-color: rgb(183, 250, 183);
+  background-color: rgb(183, 250, 183);
 }
 .upload-btn:hover {
-    box-shadow: 2px 4px 8px grey;
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
+  box-shadow: 2px 4px 8px grey;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 .pp:hover {
-    opacity: 0.9;
-    cursor: pointer;
+  opacity: 0.9;
+  cursor: pointer;
 }
+.dropdown-toggle-custom::after {
+  content: none;
+}
+

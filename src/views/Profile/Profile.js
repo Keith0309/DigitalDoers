@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import blank_profile from "../../assets/images/profile.jpeg";
 import img_placeholder from "../../assets/images/imgp.png";
 
+
+
 const Profile = () => {
   return (
     <DLforHeader>
@@ -23,14 +25,16 @@ const Profile = () => {
       </div>
       <div className="container rounded shadow mb-5">
         <div className="row">
-          <div className="col-md-3 text-center profile-box pt-5">
+          <div className="col-md-3 text-center profile-box">
             <img
-              className="pp rounded w-75 py-5"
+              className="pp rounded w-75 mt-5 mb-2 dropdown-toggle-image"
               src={blank_profile}
               alt="Profile_Picture"
               draggable="false"
             ></img>
-            <h2 className="fw-bolder">David</h2>
+              <input type="file" id="uploadProfile" hidden/>
+              <label for="uploadProfile" className="rounded upload-btn fs-5 border-0 pe-3 text-decoration-underline"><i class="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload Profile</label>
+            <h2 className="fw-bolder mt-5">David</h2>
             <h2 className="fw-bolder">Mendoza</h2>
           </div>
           <div className="col-md-9 p-5 border border-2 rounded border-start-0">

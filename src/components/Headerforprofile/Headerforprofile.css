@@ -70,9 +70,7 @@
 .dropdown-item:active {
   background-color: whitesmoke;
 }
-.dropdown-item:hover {
-  background-color: rgb(183, 250, 183);
-}
+
 .david:hover{
     text-decoration: underline;
 }
