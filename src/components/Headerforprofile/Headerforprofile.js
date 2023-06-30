@@ -68,14 +68,14 @@ const Headerforprofile = () => {
                   <Dropdown.Toggle className="bg-white text-black border-0 dropdown-toggle-split">
                     Hi,
                     <Link
-                      className="signin_link_header py-1 px-2 text-decoration-underline"
+                      className="signin_link_header py-1 px-2 david"
                       to="/profile"
                     >
                       David
                     </Link>
                   </Dropdown.Toggle>
-                  <Dropdown.Menu className="dropdown-menu">
-                    <Dropdown.Item className="text-decoration-underline">
+                  <Dropdown.Menu className="dropdown-menu p-0">
+                    <Dropdown.Item>
                       <Link
                         className="signin_link_header py-1"
                         to="/editprofile"
@@ -83,7 +83,7 @@ const Headerforprofile = () => {
                         Edit Profile
                       </Link>
                     </Dropdown.Item>
-                    <Dropdown.Item className="text-decoration-underline">
+                    <Dropdown.Item>
                       <Link
                         className="signin_link_header py-1"
                         to="/"

@@ -3,5 +3,20 @@
 }
 .bg-box:hover {
     background-color: rgb(255, 255, 255);
-    border: 3px solid rgb(183, 250, 183);
+    cursor: pointer;
+}
+.profile-box {
+    background-color: rgb(183, 250, 183);
+}
+.upload-btn {
+    background-color: rgb(183, 250, 183);
+}
+.upload-btn:hover {
+    box-shadow: 2px 4px 8px grey;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.pp:hover {
+    opacity: 0.9;
+    cursor: pointer;
 }

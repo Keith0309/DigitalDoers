@@ -2,6 +2,8 @@ import Footer2 from "../../components/Footer2/Footer2";
 import DLforHeader from "../../components/Layout/DLforHeader/DLforHeader";
 import "./Profile.css";
 import { Link } from "react-router-dom";
+import blank_profile from "../../assets/images/profile.jpeg";
+import img_placeholder from "../../assets/images/imgp.png";
 
 const Profile = () => {
   return (
@@ -18,6 +20,73 @@ const Profile = () => {
       </div>
       <div className="container">
         <h1 className="text-center fw-bold my-5">Your Profile</h1>
+      </div>
+      <div className="container rounded shadow mb-5">
+        <div className="row">
+          <div className="col-md-3 text-center profile-box pt-5">
+            <img
+              className="pp rounded w-75 py-5"
+              src={blank_profile}
+              alt="Profile_Picture"
+              draggable="false"
+            ></img>
+            <h2 className="fw-bolder">David</h2>
+            <h2 className="fw-bolder">Mendoza</h2>
+          </div>
+          <div className="col-md-9 p-5 border border-2 rounded border-start-0">
+            <h4 className="fw-bold border-bottom border-2 pb-3">INFORMATION</h4>
+            <div className="row mb-5">
+              <div className="col">
+                <h5 className="pt-4 fw-bold">Email</h5>
+                <h6 className="ps-4">davidmendoza@gmail.com</h6>
+              </div>
+              <div className="col">
+                <h5 className="pt-4 fw-bold">Phone</h5>
+                <h6 className="ps-4">(+63) 935-999-9999</h6>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <h5 className="pt-4 fw-bold">Home Address</h5>
+                  <h6 className="ps-4">
+                    John Doe 123 Main Street Barangay Santisima Trinidad
+                    Malolos, Bulacan 3000 Philippines
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <h4 className="fw-bold border-bottom border-2 pb-3">Files</h4>
+            <div className="row text-center">
+              <div className="col">
+                <h5 className="pt-4 fw-bold">Prescription</h5>
+                <img
+                  className="rounded w-75 py-2"
+                  src={img_placeholder}
+                  alt="Profile_Picture"
+                  draggable="false"
+                ></img>
+              </div>
+              <div className="col">
+                <h5 className="pt-4 fw-bold">PWD/Senior ID</h5>
+                <img
+                  className="rounded w-75 py-2"
+                  src={img_placeholder}
+                  alt="Profile_Picture"
+                  draggable="false"
+                ></img>
+              </div>
+            </div>
+            <div className="row text-center mt-3">
+              <div className="col">
+                <input type="file" id="uploadPrescription" hidden/>
+                <label for="uploadPrescription" className="rounded upload-btn fs-5 border-0 pe-3"><i class="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
+              </div>
+              <div className="col">
+                <input type="file" id="uploadPwd" hidden/>
+              <label for="uploadPwd" className="rounded upload-btn fs-5 border-0 pe-3"><i class="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="container mt-2 mb-5 p-4 border-top border-2 border-black">
         <div className="row mt-4 mb-5">
