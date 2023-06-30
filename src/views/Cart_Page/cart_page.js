@@ -6,6 +6,7 @@ import product_01 from "../../assets/images/cart_products/product_01.png"
 import product_02 from "../../assets/images/cart_products/product_02.png"
 import Counter from "./counter.js"
 import RemoveButton from "./remove.js"
+import Footer2 from "../../components/Footer2/Footer2";
 
 const Cart = ()=> {
 
@@ -13,6 +14,7 @@ const Cart = ()=> {
         <DefaultLayout >
 
             {/* Home > Pharmacy */}
+            <div className="container">
             <div className="d-flex directory-div mt-2 py-1 ">
                 <p className="directory-text d-flex ms-4 mt-2 fw-bold">
             <Link className="directory_link " to="/">
@@ -62,7 +64,9 @@ const Cart = ()=> {
                 </tbody>
             </table>
             </div>
+            </div>
             <Footer/>
+            <Footer2/>
         </DefaultLayout>
     )
 }

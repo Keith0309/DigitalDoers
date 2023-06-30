@@ -92,7 +92,7 @@ const Home = () => {
             </div>
           </Link>
         </Carousel>
-      </div>
+      
 
       <div className="text-center">
 
@@ -161,6 +161,7 @@ const Home = () => {
             </Card.Body>
           </Card>
         </div>
+      </div>
       </div>
 
       <Footer />

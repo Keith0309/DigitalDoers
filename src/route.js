@@ -4,6 +4,8 @@ import SignIn from "./views/SignIn/SignIn";
 import SignUp from "./views/SignUp/SignUp";
 import Pharmacy from "./views/Pharmacy/Pharmacy";
 import Cart from "./views/Cart_Page/cart_page";
+import Profile from "./views/Profile/Profile";
+import EditProfile from "./views/EditProfile/EditProfile";
 
 
 
@@ -13,6 +15,8 @@ const routes = createBrowserRouter([
   { path: "/signup", element: <SignUp /> },
   { path: "/pharmacy", element: <Pharmacy /> },
   { path: "/cart", element: <Cart /> },
+  { path: "/profile", element: <Profile /> },
+  { path: "/editprofile", element: <EditProfile /> },
 ]);
 
 export default routes;
