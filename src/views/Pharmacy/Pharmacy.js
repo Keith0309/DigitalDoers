@@ -1,4 +1,5 @@
 import Footer from "../../components/Footer/Footer";
+import Footer2 from "../../components/Footer2/Footer2";
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import "./Pharmacy.css";
 import { Link } from "react-router-dom";
@@ -18,6 +19,7 @@ const Pharmacy = () => {
         </div>
       </div>
       <Footer />
+      <Footer2 />
     </DefaultLayout>
   );
 };
