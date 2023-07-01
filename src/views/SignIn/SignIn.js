@@ -1,11 +1,15 @@
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import "./SignIn.css";
 import nchm_logo from "../../assets/images/ncmh_logo.png";
 import { Link } from "react-router-dom";
-import Footer2 from "../../components/Footer2/Footer2";
+import { useNavigate } from 'react-router-dom';
+
+
 
 const SignIn = () => {
+  const navigate = useNavigate();
+  let timeoutId;
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -46,7 +50,17 @@ const SignIn = () => {
       // Username not found
       setErrorMessages({ name: "uname", message: errors.uname });
     }
+    setTimeout(() => {
+      navigate('/profile');
+    }, 2000);
   };
+
+  useEffect(() => {
+    return () => {
+      // Clear the timeout if the component unmounts before the delay is finished
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   // Generate JSX code for error message
   const renderErrorMessage = (name) =>

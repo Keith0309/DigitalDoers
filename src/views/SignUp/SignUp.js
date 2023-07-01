@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import nchm_logo from "../../assets/images/ncmh_logo.png";
 import { Link } from "react-router-dom";
-import Footer2 from "../../components/Footer2/Footer2";
 
 const SignUp = () => {
   const [errorMessages, setErrorMessages] = useState({});
