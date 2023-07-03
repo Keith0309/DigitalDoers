@@ -188,13 +188,6 @@ const Home = () => {
               </Card.Body>
             </Card>
           </div>
-          <div className="text-center my-5">
-            <Link className="category_link" to="/pharmacy">
-              <button className="rounded upload-btn fs-5 border-0 p-3">
-                View All Products
-              </button>
-            </Link>
-          </div>
         </div>
       </div>
 
