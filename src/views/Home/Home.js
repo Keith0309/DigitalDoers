@@ -1,20 +1,20 @@
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import "./Home.css";
-import pharma_banner from "../../assets/images/pharma_banner.webp"
-import pharma_banner_2 from "../../assets/images/pharma_banner_2.webp"
-import pharma_banner_3 from "../../assets/images/pharma_banner_3.jpg"
+import pharma_banner from "../../assets/images/pharma_banner.webp";
+import pharma_banner_2 from "../../assets/images/pharma_banner_2.webp";
+import pharma_banner_3 from "../../assets/images/pharma_banner_3.jpg";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Footer2 from "../../components/Footer2/Footer2";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import product1 from "../../assets/images/sample_products/bondi_sands_suncreen.webp"
-import product2 from "../../assets/images/sample_products/carex_hand_soap.webp"
-import product3 from "../../assets/images/sample_products/tide_pods_laundry.jpg"
-import product4 from "../../assets/images/sample_products/purell_hand_sanitizer.jpg"
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import product1 from "../../assets/images/sample_products/bondi_sands_suncreen.webp";
+import product2 from "../../assets/images/sample_products/carex_hand_soap.webp";
+import product3 from "../../assets/images/sample_products/tide_pods_laundry.jpg";
+import product4 from "../../assets/images/sample_products/purell_hand_sanitizer.jpg";
 
 const Home = () => {
   const responsive = {
@@ -38,10 +38,10 @@ const Home = () => {
   };
 
   const slides = [
-    {url: pharma_banner, title: 'image1'},
-    {url: pharma_banner_2, title: 'image2'},
-    {url: pharma_banner_3, title: 'image3'},
-  ]
+    { url: pharma_banner, title: "image1" },
+    { url: pharma_banner_2, title: "image2" },
+    { url: pharma_banner_3, title: "image3" },
+  ];
 
   const containerStyles = {
     width: "1270px",
@@ -49,9 +49,8 @@ const Home = () => {
     margin: "30px auto",
   };
 
-  return ( 
+  return (
     <DefaultLayout>
-
       <div style={containerStyles}>
         <ImageSlider slides={slides} />
       </div>
@@ -92,76 +91,111 @@ const Home = () => {
             </div>
           </Link>
         </Carousel>
-      
 
-      <div className="text-center">
+        <div className="text-center">
+          <div className="best-sellers">
+            <h1 className="best-sellers-text">Best Sellers</h1>
+          </div>
 
-        <div className="best-sellers">
-        <h1 className="best-sellers-text">Best Sellers</h1>
+          <div className="d-flex justify-content-around pt-3">
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="p-2"
+                variant="top"
+                src={product1}
+                style={{ height: "200px", width: "200px", margin: "auto" }}
+              />
+              <Card.Body>
+                <Link className="product_link">
+                  <Card.Title>
+                    SPF 30 Fragrance Free Sunscreen Lotion
+                  </Card.Title>
+                </Link>
+                <Card.Text>
+                  Maecenas a purus urna. Quisque fringilla vestibulum enim nec
+                  commodo. Aliquam ac orci eu orci fermentum porttitor ultrices
+                  sit amet mi. Fusce felis purus, luctus ut interdum et,
+                  ultrices nec urna.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="p-2"
+                variant="top"
+                src={product2}
+                style={{ height: "200px", width: "200px", margin: "auto" }}
+              />
+              <Card.Body>
+                <Link className="product_link">
+                  <Card.Title>
+                    Carex Original Antibacterial Hand Wash 250ml and 500ml -
+                    Carex
+                  </Card.Title>
+                </Link>
+                <Card.Text>
+                  Maecenas a purus urna. Quisque fringilla vestibulum enim nec
+                  commodo. Aliquam ac orci eu orci fermentum porttitor ultrices
+                  sit amet mi. Fusce felis purus, luctus ut interdum et,
+                  ultrices nec urna.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="p-2"
+                variant="top"
+                src={product3}
+                style={{ height: "200px", width: "200px", margin: "auto" }}
+              />
+              <Card.Body>
+                <Link className="product_link">
+                  <Card.Title>
+                    Tide Pods Laundry Detergent Soap Pods, High Efficiency (HE),
+                    Original Scent, 81 Count
+                  </Card.Title>
+                </Link>
+                <Card.Text>
+                  Maecenas a purus urna. Quisque fringilla vestibulum enim nec
+                  commodo. Aliquam ac orci eu orci fermentum porttitor ultrices
+                  sit amet mi. Fusce felis purus, luctus ut interdum et,
+                  ultrices nec urna.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="p-2"
+                variant="top"
+                src={product4}
+                style={{ height: "200px", width: "200px", margin: "auto" }}
+              />
+              <Card.Body>
+                <Link className="product_link">
+                  <Card.Title>
+                    Purell Advanced Hand Sanitiser - 100ml
+                  </Card.Title>
+                </Link>
+                <Card.Text>
+                  Maecenas a purus urna. Quisque fringilla vestibulum enim nec
+                  commodo. Aliquam ac orci eu orci fermentum porttitor ultrices
+                  sit amet mi. Fusce felis purus, luctus ut interdum et,
+                  ultrices nec urna.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="text-center my-5">
+            <Link className="category_link" to="/pharmacy">
+              <button className="rounded upload-btn fs-5 border-0 p-3">
+                View All Products
+              </button>
+            </Link>
+          </div>
         </div>
-
-        <div className="d-flex justify-content-around ">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img  variant="top" src={product1} style={{ height: "200px", width: "200px", margin: "auto"}} />
-            <Card.Body>
-              <Link className="product_link">
-            <Card.Title>SPF 30 Fragrance Free Sunscreen Lotion</Card.Title>
-            </Link>
-            <Card.Text>
-            Maecenas a purus urna. Quisque fringilla vestibulum enim nec commodo.
-            Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
-            Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: '18rem' }}>
-            <Card.Img  variant="top" src={product2} style={{ height: "200px", width: "200px", margin: "auto"}} />
-            <Card.Body>
-            <Link className="product_link">
-            <Card.Title>Carex Original Antibacterial Hand Wash 250ml and 500ml - Carex</Card.Title>
-            </Link>
-            <Card.Text>
-            Maecenas a purus urna. Quisque fringilla vestibulum enim nec commodo.
-            Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
-            Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: '18rem' }}>
-            <Card.Img  variant="top" src={product3} style={{ height: "200px", width: "200px", margin: "auto"}} />
-            <Card.Body>
-            <Link className="product_link">
-            <Card.Title>Tide Pods Laundry Detergent Soap Pods, High Efficiency (HE), Original Scent, 81 Count</Card.Title>
-            </Link>
-            <Card.Text>
-            Maecenas a purus urna. Quisque fringilla vestibulum enim nec commodo.
-            Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
-            Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-
-          <Card style={{ width: '18rem' }}>
-            <Card.Img  variant="top" src={product4} style={{ height: "200px", width: "200px", margin: "auto"}} />
-            <Card.Body>
-            <Link className="product_link">
-            <Card.Title>Purell Advanced Hand Sanitiser - 100ml</Card.Title>
-            </Link>
-            <Card.Text>
-            Maecenas a purus urna. Quisque fringilla vestibulum enim nec commodo.
-            Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
-            Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        </div>
-      </div>
       </div>
 
       <Footer />
