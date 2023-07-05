@@ -1,4 +1,3 @@
-import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import "./Home.css";
 import pharma_banner from "../../assets/images/pharma_banner.webp";
@@ -9,15 +8,14 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Footer2 from "../../components/Footer2/Footer2";
-import Best_Products from "./best_seller";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Card from "react-bootstrap/Card";
 import product1 from "../../assets/images/best_products/bondi_sands_suncreen.webp"
 import product2 from "../../assets/images/best_products/carex_hand_soap.webp"
 import product3 from "../../assets/images/best_products/tide_pods_laundry.jpg"
 import product4 from "../../assets/images/best_products/purell_hand_sanitizer.jpg"
+import DLforHeader from "../../components/Layout/DLforHeader/DLforHeader";
 
-const Home = () => { 
+const Home2 = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -51,7 +49,7 @@ const Home = () => {
   };
 
   return (
-    <DefaultLayout>
+    <DLforHeader>
       <div style={containerStyles}>
         <ImageSlider slides={slides} />
       </div>
@@ -98,21 +96,28 @@ const Home = () => {
             <h1 className="best-sellers-text">Best Sellers</h1>
           </div>
 
-        <div className="d-flex justify-content-around ">
-          <Card style={{ width: '18rem' }}>
-            <Card.Img  variant="top" src={product1} style={{ height: "200px", width: "200px", margin: "auto"}} />
-            <Card.Body>
-              <Link className="product_link">
-            <Card.Title>SPF 30 Fragrance Free Sunscreen Lotion</Card.Title>
-            </Link>
-            <Card.Text>
-            Maecenas a purus urna. Quisque fringilla vestibulum enim nec commodo.
-            Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
-            Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
+          <div className="d-flex justify-content-around pt-3">
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="p-2"
+                variant="top"
+                src={product1}
+                style={{ height: "200px", width: "200px", margin: "auto" }}
+              />
+              <Card.Body>
+                <Link className="product_link">
+                  <Card.Title>
+                    SPF 30 Fragrance Free Sunscreen Lotion
+                  </Card.Title>
+                </Link>
+                <Card.Text>
+                  Maecenas a purus urna. Quisque fringilla vestibulum enim nec
+                  commodo. Aliquam ac orci eu orci fermentum porttitor ultrices
+                  sit amet mi. Fusce felis purus, luctus ut interdum et,
+                  ultrices nec urna.
+                </Card.Text>
+              </Card.Body>
+            </Card>
 
             <Card style={{ width: "18rem" }}>
               <Card.Img
@@ -160,28 +165,35 @@ const Home = () => {
               </Card.Body>
             </Card>
 
-          <Card style={{ width: '18rem' }}>
-            <Card.Img  variant="top" src={product4} style={{ height: "200px", width: "200px", margin: "auto"}} />
-            <Card.Body>
-            <Link className="product_link">
-            <Card.Title>Purell Advanced Hand Sanitiser - 100ml</Card.Title>
-            </Link>
-            <Card.Text>
-            Maecenas a purus urna. Quisque fringilla vestibulum enim nec commodo.
-            Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
-            Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                className="p-2"
+                variant="top"
+                src={product4}
+                style={{ height: "200px", width: "200px", margin: "auto" }}
+              />
+              <Card.Body>
+                <Link className="product_link">
+                  <Card.Title>
+                    Purell Advanced Hand Sanitiser - 100ml
+                  </Card.Title>
+                </Link>
+                <Card.Text>
+                  Maecenas a purus urna. Quisque fringilla vestibulum enim nec
+                  commodo. Aliquam ac orci eu orci fermentum porttitor ultrices
+                  sit amet mi. Fusce felis purus, luctus ut interdum et,
+                  ultrices nec urna.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
         </div>
-      </div>
       </div>
 
       <Footer />
       <Footer2 />
-    </DefaultLayout>
+    </DLforHeader>
   );
 };
 
-export default Home;
+export default Home2;

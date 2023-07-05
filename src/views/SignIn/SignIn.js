@@ -45,7 +45,7 @@ const SignIn = () => {
       } else {
         setIsSubmitted(true);
         setTimeout(() => {
-          navigate('/profile');
+          navigate('/home2');
         }, 2000);
       }
     } else {
