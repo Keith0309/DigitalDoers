@@ -31,3 +31,22 @@ td {
 .product_image {
   height: 200px;
 }
+.checkout_container { 
+  height: 30%;
+}
+
+.checkout_btn { 
+  outline: none;
+  width: 20%;
+  height: 40px;
+  background-color: #36a148;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: ease-out .1s;
+}
+
+.checkout_btn:hover {
+  background-color: #23692f;
+  transition: ease-out .1s;
+}

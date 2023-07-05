@@ -3,8 +3,13 @@ import Footer2 from "../../components/Footer2/Footer2";
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import "./Pharmacy.css";
 import { Link } from "react-router-dom";
+import React from "react";
+import MainContent from "./product_list";
 
 const Pharmacy = () => {
+
+
+
   return (
     <DefaultLayout>
       {/* Home > Pharmacy */}
@@ -17,9 +22,14 @@ const Pharmacy = () => {
             <i class="bi bi-chevron-right"></i> Pharmacy
           </p>
         </div>
+
+        <MainContent />
+
       </div>
-      <Footer />
-      <Footer2 />
+
+
+      {/* <Footer />
+      <Footer2 /> */}
     </DefaultLayout>
   );
 };

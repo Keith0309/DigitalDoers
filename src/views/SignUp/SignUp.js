@@ -27,7 +27,6 @@ const SignUp = () => {
 
     // Compare user info
     if (email.value.includes("@" && ".com")) {
-      alert(email.value);
       if (pass.value !== passmatch.value) {
         // Invalid password
         setErrorMessages({

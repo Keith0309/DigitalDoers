@@ -14,12 +14,20 @@
 
 .ncmh_link { 
     margin: 0 30px;
+    opacity: .9;
+}
+
+.ncmh_logo:hover, 
+.ncmh_pharma:hover, 
+.cart_icon:hover,
+.signup_link_header,
+.signin_link_header { 
+    opacity: .8;
 }
 
 
 .search_bar { border: 1px solid black; border-radius: 10px;}
 .search_input { 
-    margin-left: 5px;
     width: 25vw;
     height: 40px;
     background: transparent;

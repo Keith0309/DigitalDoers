@@ -9,14 +9,15 @@ import { Link } from "react-router-dom";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Footer2 from "../../components/Footer2/Footer2";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import product1 from "../../assets/images/sample_products/bondi_sands_suncreen.webp"
-import product2 from "../../assets/images/sample_products/carex_hand_soap.webp"
-import product3 from "../../assets/images/sample_products/tide_pods_laundry.jpg"
-import product4 from "../../assets/images/sample_products/purell_hand_sanitizer.jpg"
+import Best_Products from "./best_seller";
+// import Button from 'react-bootstrap/Button';
+// import Card from 'react-bootstrap/Card';
+// import product1 from "../../assets/images/sample_products/bondi_sands_suncreen.webp"
+// import product2 from "../../assets/images/sample_products/carex_hand_soap.webp"
+// import product3 from "../../assets/images/sample_products/tide_pods_laundry.jpg"
+// import product4 from "../../assets/images/sample_products/purell_hand_sanitizer.jpg"
 
-const Home = () => {
+const Home = () => { 
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -100,7 +101,8 @@ const Home = () => {
         <h1 className="best-sellers-text">Best Sellers</h1>
         </div>
 
-        <div className="d-flex justify-content-around ">
+      {/* Best Sellers */}
+        {/* <div className="d-flex justify-content-around ">
           <Card style={{ width: '18rem' }}>
             <Card.Img  variant="top" src={product1} style={{ height: "200px", width: "200px", margin: "auto"}} />
             <Card.Body>
@@ -112,7 +114,7 @@ const Home = () => {
             Aliquam ac orci eu orci fermentum porttitor ultrices sit amet mi.
             Fusce felis purus, luctus ut interdum et, ultrices nec urna. 
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+             <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
 
@@ -160,7 +162,9 @@ const Home = () => {
             <Button variant="primary">Go somewhere</Button>
             </Card.Body>
           </Card>
-        </div>
+        </div> */}
+
+        <Best_Products />
       </div>
       </div>
 

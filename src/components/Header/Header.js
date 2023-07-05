@@ -49,8 +49,8 @@ const Header = () => {
             <div className="search_bar align-items-center">
               {/* <div className="col-sm-2"></div> */}
               <input
-                className="search_input"
-                placeholder="Search medicines">
+                className="search_input p-2"
+                placeholder="Search item/medicine">
               </input>
 
               <button className="search_button">

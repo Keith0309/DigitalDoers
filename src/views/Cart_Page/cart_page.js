@@ -7,6 +7,7 @@ import product_02 from "../../assets/images/cart_products/product_02.png"
 import Counter from "./counter.js"
 import RemoveButton from "./remove.js"
 import Footer2 from "../../components/Footer2/Footer2";
+import { Button } from "bootstrap";
 
 const Cart = ()=> {
 
@@ -63,10 +64,18 @@ const Cart = ()=> {
                     </tr>
                 </tbody>
             </table>
+
+            <div className=" checkout_container d-flex justify-content-end mt-3">
+                <button className="checkout_btn "> Proceed to Checkout </button>
             </div>
+
             </div>
-            <Footer/>
-            <Footer2/>
+
+
+            
+            </div>
+            {/* <Footer/>
+            <Footer2/> */}
         </DefaultLayout>
     )
 }
