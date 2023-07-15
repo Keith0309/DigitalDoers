@@ -139,7 +139,6 @@ const product_card = [
             category: "multivitamins"
         },
         
-        
 ]
 
 export default product_card;

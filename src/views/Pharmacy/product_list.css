@@ -11,14 +11,26 @@
     justify-content: center;
 }
 
+.item-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .card-container{ 
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     font-family: 'Rubik', sans-serif;
 }  
+
+.card { 
+    margin: 0 auto;
+    display: flex;
+    width: 350px;
+    height: 500px;
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+}
 
 .item_name_container { 
     width: 90%;
@@ -29,13 +41,7 @@
 .item_name { 
     font-weight: bold;
 }
-.card { 
-    margin: 0 auto;
-    display: flex;
-    width: 350px;
-    height: 500px;
-    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
-}
+
 
 .item_details {
     display: flex;
@@ -87,11 +93,23 @@
 
   } */
 
-  .search_input {
-    width: 50%;
+  .search_medicine {
+    width: 100%;
     border-radius: 10px;
-  }
+    width: 15vw;
+    height: 40px;
+    background: transparent;
+    border: 0px solid;
+    font-family: 'Rubik', sans-serif;
+ }
+ .search_medicine:focus {
+    outline: none;
+}
 
   .category_dropdown { 
     width: 20%;
   }
+
+.searchMedContainer { 
+    width: 50% !important;
+}
