@@ -83,33 +83,3 @@
     font-weight: bold;
 }
 
-/* .card-container{ 
-    display: flex;
-
-    width: 100%;
-    height: 100%;
-    padding: 30px 50px 20px 50px;
-    box-sizing: border-box;
-
-  } */
-
-  .search_medicine {
-    width: 100%;
-    border-radius: 10px;
-    width: 15vw;
-    height: 40px;
-    background: transparent;
-    border: 0px solid;
-    font-family: 'Rubik', sans-serif;
- }
- .search_medicine:focus {
-    outline: none;
-}
-
-  .category_dropdown { 
-    width: 20%;
-  }
-
-.searchMedContainer { 
-    width: 50% !important;
-}

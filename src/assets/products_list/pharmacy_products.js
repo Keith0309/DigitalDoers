@@ -1,6 +1,6 @@
 // /src/assets/products_list/product_images/1_Escivex_10mg_Tablet.png
 
-const product_card = [
+const pharmacy_products = [
         {
             id: 1,
             product_name: "Escivex 10mg Tablet",
@@ -8,7 +8,7 @@ const product_card = [
             price: 22.50,
             currency: "₱",
             image: "./product_images/1_Escivex_10mg_Tablet.png",
-            category: "antidepressant"
+            category: "Anti-depressant"
         },
         {
             id: 2,
@@ -17,7 +17,8 @@ const product_card = [
             price: 53.60,
             currency: "₱",
             image: "./product_images/2_Risdin_2mg_Tablet.png",
-            category: "antidepressant"
+            category: "Anti-depressant",
+
         },
         {
             id: 3,
@@ -26,7 +27,7 @@ const product_card = [
             price: 52.00,
             currency: "₱",
             image: "./product_images/3_ Jovia_10mg_Tablet.png",
-            category: "antidepressant"
+            category: "Anti-depressant",
         },
         {
             id: 4,
@@ -35,7 +36,7 @@ const product_card = [
             price: 31.60,
             currency: "₱",
             image: "./product_images/4_Valpros_500mg_Tablet.png",
-            category: "antidepressant"
+            category: "Anti-depressant"
         },
         {
             id: 5,
@@ -44,7 +45,7 @@ const product_card = [
             price: 290.50,
             currency: "₱",
             image: "./product_images/5_Valpros_Pedia_200mg_5mg_Syrup.png",
-            category: "antidepressant"
+            category: "Anti-depressant"
         },
 
         {
@@ -54,7 +55,7 @@ const product_card = [
             price: 160.00,
             currency: "₱",
             image: "./product_images/25_Bioflu_10mg_2mg_500mg_Tablet_20s.png",
-            category: "cold_remedies"
+            category: "Cold Remedies"
         },
         {
             id: 26,
@@ -63,7 +64,7 @@ const product_card = [
             price: 110.00,
             currency: "₱",
             image: "./product_images/26_Neozep_Forte 10mg_2mg_500mg_Caplet_20s.png",
-            category: "cold_remedies"
+            category: "Cold Remedies"
         },
         {
             id: 27,
@@ -72,7 +73,7 @@ const product_card = [
             price: 18.75,
             currency: "₱",
             image: "./product_images/27_Sinupret_Forte_Tablet.png",
-            category: "cold_remedies"
+            category: "Cold Remedies"
         },
         {
             id: 28,
@@ -81,7 +82,7 @@ const product_card = [
             price: 125.00,
             currency: "₱",
             image: "./product_images/28_Neozep_Non_Drowsy_10mg_500mg_Tablet_20s.png",
-            category: "cold_remedies"
+            category: "Cold Remedies"
         },
         {
             id: 29,
@@ -90,7 +91,7 @@ const product_card = [
             price: 72.50,
             currency: "₱",
             image: "./product_images/29_No-Drowse_Decolgen_25mg_500mg_Tablet_10s.png",
-            category: "cold_remedies"
+            category: "Cold Remedies"
         },
 
         {
@@ -100,7 +101,7 @@ const product_card = [
             price: 290.00,
             currency: "₱",
             image: "./product_images/49_Centrum_Advance_Multivitamins_Minerals_Tablets_30s.png",
-            category: "multivitamins"
+            category: "Multivitamins"
         },    
         {
             id: 50,
@@ -109,7 +110,7 @@ const product_card = [
             price: 352.50,
             currency: "₱",
             image: "./product_images/50_Myra_E_400_IU_Capsule_30s.png",
-            category: "multivitamins"
+            category: "Multivitamins"
         },
         {
             id: 51,
@@ -118,7 +119,7 @@ const product_card = [
             price: 360.00,
             currency: "₱",
             image: "./product_images/51_Centrum_Silver_Multivitamins_Minerals_Tablets_30s.png",
-            category: "multivitamins"
+            category: "Multivitamins"
         },
         {
             id: 52,
@@ -127,7 +128,7 @@ const product_card = [
             price: 93.50,
             currency: "₱",
             image: "./product_images/52_Pharex_Vitamin_B_Complex_Tablet_Tipid_Pack_17_3s.png",
-            category: "multivitamins"
+            category: "Multivitamins"
         },
         {
             id: 53,
@@ -136,9 +137,9 @@ const product_card = [
             price: 202.50,
             currency: "₱",
             image: "./product_images/53Forti-D_800IU_Capsule_30s.png",
-            category: "multivitamins"
-        },
+            category: "Multivitamins"
+        }
         
 ]
 
-export default product_card;
+export default pharmacy_products;

@@ -1,0 +1,37 @@
+.search_med_div { 
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.clearSearch_btn {
+background: none;
+border: none;
+opacity: 1;
+}
+.clearSearch_btn:hover {
+    opacity: .8;
+}
+    
+
+.search_medicine {
+    border-radius: 10px;
+    width: 20vw;
+    background: transparent;
+    font-family: 'Rubik', sans-serif;
+    border: none!important;
+    outline: none;
+ }
+ .search_medicine:focus {
+    outline: none;
+}
+
+.category_dropdown { 
+    width: 20vw;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 6px 0px;
+  }
+
+  .noMatch { 
+    margin-top: 20%;
+  }
