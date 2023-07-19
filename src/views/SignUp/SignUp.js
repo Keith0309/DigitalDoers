@@ -3,10 +3,21 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import nchm_logo from "../../assets/images/ncmh_logo.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const SignUp = () => {
   const [errorMessages, setErrorMessages] = useState({});
   const [isAccountCreated, setisAccountCreated] = useState(false);
+  const [values, setValues] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    password: "",
+  });
+  //handle change and set input values using name property
+  const handleChange = (event) => {
+    setValues({ ...values, [event.target.name]: event.target.value });
+  };
 
   const errors = {
     email: "You have entered an invalid email. Please try again.",
@@ -18,7 +29,7 @@ const SignUp = () => {
     //Prevent page reload
     event.preventDefault();
 
-    var { email, pass, passmatch } = document.forms[0];
+    var { email, password, passmatch } = document.forms[0];
 
     // Find user login info
     // const userData = database.find((user) => user.username === uname.value);
@@ -27,13 +38,17 @@ const SignUp = () => {
 
     // Compare user info
     if (email.value.includes("@" && ".com")) {
-      if (pass.value !== passmatch.value) {
+      if (password.value !== passmatch.value) {
         // Invalid password
         setErrorMessages({
           name: "passnotmatch",
           message: errors.passnotmatch,
         });
       } else {
+        axios
+          .post("http://localhost:3001/users", values)
+          .then((res) => console.log("Registered Successfully!!"))
+          .catch((err) => console.log(err));
         setisAccountCreated(true);
       }
     } else {
@@ -58,21 +73,40 @@ const SignUp = () => {
             placeholder=" email@youremail.com"
             type="text"
             name="email"
+            onChange={handleChange}
             required
           />
           {renderErrorMessage("email")}
         </div>
         <div className="input-container">
           <label className="fw-bold">First Name </label>
-          <input placeholder=" First Name" type="text" name="fName" required />
+          <input
+            placeholder=" First Name"
+            type="text"
+            name="firstName"
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="input-container">
           <label className="fw-bold">Last Name </label>
-          <input placeholder=" Last Name" type="text" name="lName" required />
+          <input
+            placeholder=" Last Name"
+            type="text"
+            name="lastName"
+            onChange={handleChange}
+            required
+          />
         </div>
         <div className="input-container">
           <label className="fw-bold">Password </label>
-          <input placeholder=" password" type="password" name="pass" required />
+          <input
+            placeholder=" password"
+            type="password"
+            name="password"
+            onChange={handleChange}
+            required
+          />
           {renderErrorMessage("pass")}
         </div>
         <div className="input-container">
@@ -133,6 +167,11 @@ const SignUp = () => {
             {isAccountCreated ? (
               <div className="text-center">
                 You have successfully created an account!
+                <div>
+                  <Link className="text-decoration-underline fs-5" to="/signin">
+                    Login here
+                  </Link>
+                </div>
               </div>
             ) : (
               renderForm

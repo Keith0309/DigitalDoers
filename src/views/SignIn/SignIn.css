@@ -1,89 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
 
 .ncmh-logo {
-    height: 150px;
-  }
+  height: 150px;
+}
 
-  .signin-form {
-    width: 40%;
-    border: 2px solid black;
-    border-radius: 20px;
-    margin: 50px auto; 
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    font-family: 'Rubik', sans-serif;
-  }
+.signin-form {
+  width: 40%;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Rubik", sans-serif;
+}
 
-  .login-form {
-    background-color: white;
-    padding: 2rem;
-    width: 75%;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    height: 35px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  width: 75%;
+}
 
-  }
+input[type="text"],
+input[type="password"] {
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
 
-  
-  input[type="submit"] {
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #01d28e;
-    border: 1px solid #01d28e;
-    color: #fff;
-    padding: 10px 20px;
-  }
-  
-  /* input[type="submit"]:hover {
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+/* input[type="submit"]:hover {
     background: #6cf0c2;
   } */
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin: 35px 0px;
-  }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0px;
+}
 
 .login-button {
-    width: 390px;
-    padding: 10px 0px;
-    border-radius: 50px;
-    background-color: #598201;
-    border: none;
-    color: white;
+  width: 390px;
+  padding: 10px 0px;
+  border-radius: 50px;
+  background-color: #598201;
+  border: none;
+  color: white;
 }
-  
-
-  .list-container {
-    display: flex;
-  }
-  
-  .error {
-    color: red;
-    font-size: 14px;
-  }
-  
-  .title {
-    font-size: 25px;
-    margin-bottom: 20px;
-  }
-  
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 10px;
-  }
-.signup_link, .forgot_pass {
-    text-decoration: none;
-    color: #2680eb;
+.login-button:hover {
+  text-decoration:underline;
 }
 
+.list-container {
+  display: flex;
+}
 
-.directory-div { 
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+.signup_link,
+.forgot_pass {
+  text-decoration: none;
+  color: #2680eb;
+}
+
+.directory-div {
   background-color: #f8f9fa;
 }
 
@@ -93,5 +93,5 @@
 
 .directory_link {
   text-decoration: none;
-  color: #3e7ba4
+  color: #3e7ba4;
 }
