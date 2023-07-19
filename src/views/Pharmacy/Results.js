@@ -1,13 +1,21 @@
 import React from 'react';
 
-const Results = ({ data, selectedCategory, searchTerm }) => {
-    const filteredData = data.filter(item => {
-        const matchesCategory = selectedCategory === '' || item.category === selectedCategory;
-        const matchesSearch = item.product_name.toLowerCase().includes(searchTerm.toLowerCase());
-        return matchesCategory && matchesSearch;
+const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
+  const filteredData = data.filter(item => {
+    const matchesCategory = selectedCategory === '' || item.category === selectedCategory;
+    const matchesSearch = item.product_name.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
   });
 
-  if (filteredData.length === 0) {
+  const sortedData = [...filteredData].sort((a, b) => {
+    if (sortOption === 'price') {
+      return a.price - b.price;
+    } else if (sortOption === 'name') {
+    return a.product_name.localeCompare(b.product_name);
+    }
+  });
+
+  if (sortedData.length === 0) {
     return <div className='noMatch text-center'>
         <h3>No results found. Please try again.</h3>
         </div>
@@ -15,7 +23,7 @@ const Results = ({ data, selectedCategory, searchTerm }) => {
 
   return (
     <div className="row row-cols-4">
-      {filteredData.map(item => (
+      {sortedData.map(item => (
         <div className="card-container">
         <div className="card" key={item.id}>
             <div className="card_img">

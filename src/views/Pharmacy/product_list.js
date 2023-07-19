@@ -1,28 +1,33 @@
-import pharmacy_products from "../../assets/products_list/pharmacy_products";
-import React, {useState} from "react";
-import "./product_list.css"
-// import Form from 'react-bootstrap/Form';
+import React, { useState } from 'react';
 import FilterSearch from './FilterSearch';
 import Results from './Results';
-
+import pharmacy_products from "../../assets/products_list/pharmacy_products"
+import "./product_list.css"
 const MainContent = () => {
 
   const [categories, setCategories] = useState(['Anti-depressant', 'Cold Remedies', 'Multivitamins']);
   const [selectedCategory, setSelectedCategory] = useState('');
+  const [sortOption, setSortOption] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
   
 
-  const handleCategoryChange = (event) => {
+  const handleCategoryChange = event => {
     setSelectedCategory(event.target.value);
   };
 
-  const handleSearch = (event) => {
+  const handleSortChange = event => {
+    setSortOption(event.target.value);
+  };
+
+  const handleSearchChange = event => {
     setSearchTerm(event.target.value);
   };
 
-  const handleClear = () => {
-      setSearchTerm('');
-    };
+  const handleClearSearch = () => {
+    setSearchTerm('');
+  };
+
+  const data = pharmacy_products;
   
   return (
     <div>
@@ -30,11 +35,16 @@ const MainContent = () => {
         categories={categories}
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
+        sortOption={sortOption}
+        onSortChange={handleSortChange}
         searchTerm={searchTerm}
-        onSearch={handleSearch}
-        onClear={handleClear}
+        onSearchChange={handleSearchChange}
+        onClearSearch={handleClearSearch}
       />
-      <Results data={pharmacy_products} selectedCategory={selectedCategory} searchTerm={searchTerm} />
+      <Results data={data}
+        selectedCategory={selectedCategory}
+        sortOption={sortOption}
+        searchTerm={searchTerm} />
     </div>
 );
 
