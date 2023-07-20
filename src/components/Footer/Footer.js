@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="col-md-6 p-4">
             <div className="row">
               <div className="col-md-2 mt-3 text-end">
-                <i class="ic bi bi-headphones fs-4 fw-bold"></i>
+                <i className="ic bi bi-headphones fs-4 fw-bold"></i>
               </div>
               <div className="col-md-10">
                 <div className="border-bottom border-2 border-success mb-2 ">
@@ -49,16 +49,16 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-1">
                 <div className="my-1">
-                  <i class="ic bi bi bi-geo-alt-fill fs-4"></i>
+                  <i className="ic bi bi bi-geo-alt-fill fs-4"></i>
                 </div>
                 <div className="my-3">
-                  <i class="ic bi bi-envelope-at-fill fs-4"></i>
+                  <i className="ic bi bi-envelope-at-fill fs-4"></i>
                 </div>
                 <div className="my-3">
-                  <i class="ic bi bi-telephone-fill fs-4"></i>
+                  <i className="ic bi bi-telephone-fill fs-4"></i>
                 </div>
                 <div className="my-4">
-                  <i class="ic bi-globe2 fs-4"></i>
+                  <i className="ic bi-globe2 fs-4"></i>
                 </div>
               </div>
               <div className="col-md-11">
@@ -81,10 +81,10 @@ const Footer = () => {
               </div>
               <div className="column pt-2 border-top border-2 border-success mt-2">
                 <h5 className="fw-bolder ms-4 text-success">Follow Us</h5>
-                <i class="i bi bi-facebook fs-4 p-4"></i>
-                <i class="i bi bi-twitter fs-4 p-4"></i>
-                <i class="i bi bi-instagram fs-4 p-4"></i>
-                <i class="i bi bi-linkedin fs-4 p-4"></i>
+                <i className="i bi bi-facebook fs-4 p-4"></i>
+                <i className="i bi bi-twitter fs-4 p-4"></i>
+                <i className="i bi bi-instagram fs-4 p-4"></i>
+                <i className="i bi bi-linkedin fs-4 p-4"></i>
               </div>
             </div>
           </div>

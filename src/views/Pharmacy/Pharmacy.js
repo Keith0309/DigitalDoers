@@ -19,7 +19,7 @@ const Pharmacy = () => {
             <Link className="directory_link " to="/">
               Home
             </Link>
-            <i class="bi bi-chevron-right"></i> Pharmacy
+            <i className="bi bi-chevron-right"></i> Pharmacy
           </p>
         </div>
 

@@ -50,11 +50,11 @@ const Counter = () => {
   return (
     <div style={counterStyle} className='justify-content-center'>
       <button style={decreaseStyle} className='mx-2 text-white' onClick={handleDecrement}>
-      <i class="bi bi-chevron-left"></i>
+      <i className="bi bi-chevron-left"></i>
       </button>
       <input style={inputStyle} type="text" value={count} onChange={handleChange} />
       <button style={increaseStyle} className='mx-2 text-white' onClick={handleIncrement}>
-      <i class="bi bi-chevron-right"></i>
+      <i className="bi bi-chevron-right"></i>
       </button>
     </div>
   );

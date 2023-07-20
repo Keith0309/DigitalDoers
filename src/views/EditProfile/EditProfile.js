@@ -106,10 +106,10 @@ const EditProfile = () => {
             </div>
             <div className="row mb-5">
               <button className="rounded edit-btn fs-5 border-0 p-2 w-25 mx-2">
-                <i class="bi bi-x-square me-2 "></i>Cancel
+                <i className="bi bi-x-square me-2 "></i>Cancel
               </button>
               <button className="rounded edit-btn fs-5 border-0 p-2 w-25 mx-2">
-                <i class="bi bi-check-square me-2 "></i>Save
+                <i className="bi bi-check-square me-2 "></i>Save
               </button>
             </div>
           </div>

@@ -16,7 +16,7 @@ const FilterSearch = ({ categories, selectedCategory, onCategoryChange, onSearch
       <div className="search_med_div">
       <input  className="search_medicine ps-2" type="text" placeholder="Search" value={searchTerm} onChange={onSearch} />
       <button className='clearSearch_btn' onClick={onClear}>
-      <i class=" bi bi-backspace-fill"></i>
+      <i className=" bi bi-backspace-fill"></i>
       </button>
       </div>
     </div>
