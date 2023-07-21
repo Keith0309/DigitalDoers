@@ -4,8 +4,10 @@ import "./SignUp.css";
 import nchm_logo from "../../assets/images/ncmh_logo.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const [errorMessages, setErrorMessages] = useState({});
   const [isAccountCreated, setisAccountCreated] = useState(false);
   const [values, setValues] = useState({
@@ -50,6 +52,9 @@ const SignUp = () => {
           .then((res) => console.log("Registered Successfully!!"))
           .catch((err) => console.log(err));
         setisAccountCreated(true);
+        setTimeout(() => {
+          navigate('/signin');
+        }, 2000);
       }
     } else {
       // Username not found
@@ -146,7 +151,7 @@ const SignUp = () => {
             <Link className="directory_link " to="/">
               Home
             </Link>
-            <i class="bi bi-chevron-right"></i> Create Account
+            <i className="bi bi-chevron-right"></i> Create Account
           </p>
         </div>
       </div>
@@ -167,11 +172,6 @@ const SignUp = () => {
             {isAccountCreated ? (
               <div className="text-center">
                 You have successfully created an account!
-                <div>
-                  <Link className="text-decoration-underline fs-5" to="/signin">
-                    Login here
-                  </Link>
-                </div>
               </div>
             ) : (
               renderForm

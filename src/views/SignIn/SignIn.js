@@ -1,66 +1,59 @@
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
-import React, { useState  } from "react";
+import React, { useState } from "react";
 import "./SignIn.css";
 import nchm_logo from "../../assets/images/ncmh_logo.png";
 import { Link } from "react-router-dom";
-import { useNavigate } from 'react-router-dom';
-
-
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+// import Validation from "./LoginValidation";
 
 const SignIn = () => {
   const navigate = useNavigate();
-  const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [values, setValues] = useState({
+    email: "",
+    password: "",
+  });
+  const [noRecordMessage, setNoRecordMessage] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const database = [
-    {
-      username: "user1",
-      password: "pass1",
-    },
-    {
-      username: "user2",
-      password: "pass2",
-    },
-  ];
-
-  const errors = {
-    uname: "You have entered an invalid email. Please try again.",
-    pass: "Your email and password does not match. Please try again",
+  const handleInput = (event) => {
+    setValues({ ...values, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
+    setEmailError("");
+    setPasswordError("");
 
-    var { uname, pass } = document.forms[0];
-
-    // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
-
-    // Compare user info
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        setIsSubmitted(true);
-        setTimeout(() => {
-          navigate('/home2');
-        }, 2000);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
+    if (!values.email) {
+      setEmailError("Email should not be empty");
     }
-
+    if (!email_pattern.test(values.email)) {
+      setEmailError("Please enter a valid email");
+    }
+    if (!values.password) {
+      setPasswordError("Password should not be empty");
+    }
+    if (values.email && values.password) {
+      axios
+        .post("http://localhost:3001/login", values)
+        .then((res) => {
+          if (res.data === "Success") {
+            setIsSubmitted(true);
+            navigate("/");
+          } else {
+            setNoRecordMessage(
+              "Your email and password does not match. Please try again"
+            );
+          }
+        })
+        .catch((err) => console.log(err));
+    }
   };
-
-  // Generate JSX code for error message
-  const renderErrorMessage = (name) =>
-    name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
-    );
-
   // JSX code for login form
   const renderForm = (
     <div className="form">
@@ -70,15 +63,24 @@ const SignIn = () => {
           <input
             placeholder=" email@youremail.com"
             type="text"
-            name="uname"
-            required
+            name="email"
+            onChange={handleInput}
           />
-          {renderErrorMessage("uname")}
+
+          <span className="error"> {emailError} </span>
         </div>
         <div className="input-container">
           <label className="fw-bold">Password </label>
-          <input placeholder=" password" type="password" name="pass" required />
-          {renderErrorMessage("pass")}
+          <input
+            placeholder=" password"
+            type="password"
+            name="password"
+            onChange={handleInput}
+          />
+
+          <span className="error"> {passwordError} </span>
+
+          <span className="error">{noRecordMessage}</span>
         </div>
         <div className="button-container">
           <button className="login-button fw-bold" type="submit">
@@ -112,7 +114,7 @@ const SignIn = () => {
             <Link className="directory_link " to="/">
               Home
             </Link>
-            <i class="bi bi-chevron-right"></i> Sign in
+            <i className="bi bi-chevron-right"></i> Sign in
           </p>
         </div>
       </div>
