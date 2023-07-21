@@ -40,11 +40,11 @@ const EditProfile = () => {
             <Link className="directory_link " to="/">
               Home
             </Link>
-            <i class="bi bi-chevron-right"></i>
+            <i className="bi bi-chevron-right"></i>
             <Link className="directory_link " to="/profile">
               Profile
             </Link>
-            <i class="bi bi-chevron-right"></i>
+            <i className="bi bi-chevron-right"></i>
             Edit Profile
           </p>
         </div>

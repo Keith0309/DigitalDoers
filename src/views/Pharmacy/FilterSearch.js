@@ -29,7 +29,7 @@ const FilterSearch = ({
       <div className="search_med_div">
       <input  className="search_medicine ps-2" type="text" placeholder="Search" value={searchTerm} onChange={onSearchChange} />
       <button className='clearSearch_btn' onClick={onClearSearch}>
-      <i class=" bi bi-backspace-fill"></i>
+      <i className=" bi bi-backspace-fill"></i>
       </button>
       </div>
       </div>
