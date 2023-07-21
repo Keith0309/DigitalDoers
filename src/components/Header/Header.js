@@ -5,8 +5,10 @@ import ncmh_logo from "../../assets/images/ncmh_logo.png";
 import cart_icon from "../../assets/images/cart-shopping-solid.svg";
 import search_icon from "../../assets/images/magnifying-glass-solid.svg";
 import ncmh_pharma from "../../assets/images/ncmh_pharmacy.png"
+import { Dropdown } from "react-bootstrap";
 
-const Header = () => {
+const Header = ({ isAuthenticated, firstName, handleLogout }) => {
+
   return (
     <div className="main_header ">
       <div className="header mx-auto ">
@@ -62,7 +64,43 @@ const Header = () => {
                 ></img>
               </button>
             </div>
-
+            <div className="d-flex align-items-center">
+      {isAuthenticated ? (
+          // Display firstName and logout link when logged in 
+                    <div>
+                      <Dropdown>
+                        <Dropdown.Toggle className="bg-white text-black border-0 dropdown-toggle-split">
+                          Hi,
+                          <Link
+                            className="signin_link_header py-1 px-2 david"
+                            to="/profile"
+                          >
+                            {firstName}
+                          </Link>
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu className="dropdown-menu p-0">
+                          <Dropdown.Item>
+                            <Link
+                              className="signin_link_header py-1"
+                              to="/editprofile"
+                            >
+                              Edit Profile
+                            </Link>
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <Link
+                              className="signin_link_header py-1"
+                              to="/"
+                              onClick={handleLogout}
+                            >
+                              Logout
+                            </Link>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </div>
+                    
+      ) : (
             <div className="d-flex align-items-center">
               <div>
                 <Link className="signin_link_header px-2" to="/signin">
@@ -75,7 +113,8 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-
+            )}
+            </div>
             <div>
               <Link className="cart_button" to="/cart">
                 <img
