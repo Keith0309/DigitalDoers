@@ -65,12 +65,12 @@ const Header = () => {
 
             <div className="d-flex align-items-center">
               <div>
-                <Link className="signin_link_header py-1 px-4 me-2" to="/signin">
+                <Link className="signin_link_header px-2" to="/signin">
                   Login
                 </Link>
               </div>
               <div>
-                <Link className="signup_link_header" to="/signup">
+                <Link className="signup_link_header px-2" to="/signup">
                   Create Account
                 </Link>
               </div>

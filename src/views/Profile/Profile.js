@@ -16,7 +16,7 @@ const Profile = () => {
             <Link className="directory_link " to="/">
               Home
             </Link>
-            <i class="bi bi-chevron-right"></i> Profile
+            <i className="bi bi-chevron-right"></i> Profile
           </p>
         </div>
       </div>
@@ -33,7 +33,7 @@ const Profile = () => {
               draggable="false"
             ></img>
               <input type="file" id="uploadProfile" hidden/>
-              <label for="uploadProfile" className="rounded upload-btn fs-5 border-0 pe-3 text-decoration-underline"><i class="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload Profile</label>
+              <label for="uploadProfile" className="rounded upload-btn fs-5 border-0 pe-3 text-decoration-underline"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload Profile</label>
             <h2 className="fw-bolder mt-5">David</h2>
             <h2 className="fw-bolder">Mendoza</h2>
           </div>
@@ -82,11 +82,11 @@ const Profile = () => {
             <div className="row text-center mt-3">
               <div className="col">
                 <input type="file" id="uploadPrescription" hidden/>
-                <label for="uploadPrescription" className="rounded upload-btn fs-5 border-0 pe-3"><i class="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
+                <label for="uploadPrescription" className="rounded upload-btn fs-5 border-0 pe-3"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
               </div>
               <div className="col">
                 <input type="file" id="uploadPwd" hidden/>
-              <label for="uploadPwd" className="rounded upload-btn fs-5 border-0 pe-3"><i class="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
+              <label for="uploadPwd" className="rounded upload-btn fs-5 border-0 pe-3"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
               </div>
             </div>
           </div>
@@ -101,21 +101,21 @@ const Profile = () => {
                 <h4 className="fw-bold">Prescription Management</h4>
                 <div className="row mt-5">
                   <div className="col-md-5 rounded text-center shadow py-3 mx-3 bg-box">
-                    <i class="bi bi-prescription2 fs-1 fw-bolder"></i>
+                    <i className="bi bi-prescription2 fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Refill</h6>
                   </div>
                   <div className="col-md-5 rounded text-center shadow py-3 mx-3 bg-box">
-                    <i class="bi bi-prescription fs-1 fw-bolder"></i>
+                    <i className="bi bi-prescription fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Manage</h6>
                   </div>
                 </div>
                 <div className="row mt-5">
                   <div className="col-md-5 rounded text-center shadow py-3 mx-3 bg-box">
-                    <i class="bi bi-clock-history fs-1 fw-bolder"></i>
+                    <i className="bi bi-clock-history fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Order History</h6>
                   </div>
                   <div className="col-md-5 rounded text-center shadow py-3 mx-3 bg-box">
-                    <i class="bi bi-bell fs-1 fw-bolder"></i>
+                    <i className="bi bi-bell fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Notification</h6>
                   </div>
                 </div>
@@ -124,17 +124,17 @@ const Profile = () => {
                 <h4 className="fw-bold">Additional Services</h4>
                 <div className="row mt-5">
                   <div className="col-md-5 rounded text-center shadow py-2 mx-3 bg-box">
-                    <i class="bi bi-box-seam fs-1 fw-bolder"></i>
+                    <i className="bi bi-box-seam fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Pick Up and Delivery</h6>
                   </div>
                   <div className="col-md-5 rounded text-center shadow py-2 mx-3 bg-box">
-                    <i class="bi bi-book fs-1 fw-bolder"></i>
+                    <i className="bi bi-book fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Pharmacy Resources</h6>
                   </div>
                 </div>
                 <div className="row mt-5">
                   <div className="col-md-11 rounded text-center shadow py-3 mx-3 bg-box">
-                    <i class="bi bi-activity fs-1 fw-bolder"></i>
+                    <i className="bi bi-activity fs-1 fw-bolder"></i>
                     <h6 className="fw-bold">Free Blood Pressure Screening</h6>
                   </div>
                 </div>

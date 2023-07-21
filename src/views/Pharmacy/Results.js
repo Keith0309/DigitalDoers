@@ -26,7 +26,7 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
     <div className="row row-cols-4">
       {sortedData.map(item => (
         <div className="card-container">
-          <a className="card_link" href={`/${item.category.toLowerCase()}/${item.product_name}`}> 
+          <a className="card_link" rel="noreferrer" target="_blank" href={`/${item.category.toLowerCase()}/${item.product_name}`}> 
         <div className="card" key={item.id}>
             <div className="card_img">
             <img className="prod_img" src={item.image} alt="product_img"/>

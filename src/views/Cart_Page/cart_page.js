@@ -21,7 +21,7 @@ const Cart = ()=> {
             <Link className="directory_link " to="/">
                 Home
             </Link>
-            <i class="bi bi-chevron-right"></i> Cart
+            <i className="bi bi-chevron-right"></i> Cart
             </p>
             </div>
 
