@@ -10,13 +10,15 @@ const ProductDescriptionPage = () => {
     return <div>Product not found!</div>;
   }
 
-  return (
-    <div key={item.id}>
-      <h1>{item.product_name}</h1>
-      <img src={item.image} alt={item.product_name} />
-      <p>Price: ${item.price}</p>
-      <p>{item.description}</p>
-    </div>
+    return (
+      <div>
+      <div key={item.id}>
+        <h1>{item.product_name}</h1>
+        <img src={item.image} alt={item.product_name} />
+        <p>Price: ${item.price}</p>
+        <p>{item.description}</p>        
+      </div>
+      </div>
   );
 };
 
