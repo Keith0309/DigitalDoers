@@ -14,59 +14,127 @@ const SignUp = () => {
     email: "",
     firstName: "",
     lastName: "",
+    phoneNumber: "",
     password: "",
+    passmatch: "",
   });
+  const [errors, setErrors] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    password: "",
+    passmatch: "",
+  });
+
+  //validation patterns
+  const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phone_pattern = /^[0-9]{11}$/;
+  const password_pattern = /^.{8,}$/;
+
   //handle change and set input values using name property
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
-  };
-
-  const errors = {
-    email: "You have entered an invalid email. Please try again.",
-    pass: "The password you entered is incorrect. Please try again",
-    passnotmatch: "Your password does not match. Please try again.",
   };
 
   const handleSubmit = (event) => {
     //Prevent page reload
     event.preventDefault();
 
-    var { email, password, passmatch } = document.forms[0];
-
-    // Find user login info
-    // const userData = database.find((user) => user.username === uname.value);
-
-    // var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
-
-    // Compare user info
-    if (email.value.includes("@" && ".com")) {
-      if (password.value !== passmatch.value) {
-        // Invalid password
-        setErrorMessages({
-          name: "passnotmatch",
-          message: errors.passnotmatch,
-        });
-      } else {
-        axios
-          .post("http://localhost:3001/users", values)
-          .then((res) => console.log("Registered Successfully!!"))
-          .catch((err) => console.log(err));
-        setisAccountCreated(true);
-        setTimeout(() => {
-          navigate('/signin');
-        }, 2000);
-      }
+    //Form Validation
+    if (!values.email) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Email should not be empty",
+      }));
+    } else if (!email_pattern.test(values.email)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Please enter a valid email",
+      }));
     } else {
-      // Username not found
-      setErrorMessages({ name: "email", message: errors.email });
+      setErrors((prevErrors) => ({ ...prevErrors, email: "" }));
+    }
+
+    if (!values.firstName) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        firstName: "Firstname should not be empty",
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, firstName: "" }));
+    }
+
+    if (!values.lastName) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        lastName: "Lastname should not be empty",
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, lastName: "" }));
+    }
+
+    if (!values.phoneNumber) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        phoneNumber: "Phone Number should not be empty",
+      }));
+    } else if (!phone_pattern.test(values.phoneNumber)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        phoneNumber: "Please enter your 11 digits phone number",
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, phoneNumber: "" }));
+      console.log(values.phoneNumber);
+    }
+
+    if (!values.password) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Password should not be empty",
+      }));
+    } else if (!password_pattern.test(values.password)) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Your password must be at least 8 characters long",
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, password: "" }));
+    }
+
+    if (!values.passmatch) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        passmatch: "Password confirmation should not be empty",
+      }));
+    } else if (values.password !== values.passmatch) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        passmatch: "Your password does not match. Please try again.",
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, passmatch: "" }));
+    }
+
+    if (
+      values.email &&
+      values.firstName &&
+      values.lastName &&
+      values.phoneNumber &&
+      values.password &&
+      values.password === values.passmatch
+    ) {
+      axios
+        .post("http://localhost:3001/users", values)
+        .then((res) => console.log("Registered Successfully!!"))
+        .catch((err) => console.log(err));
+      setisAccountCreated(true);
+      setTimeout(() => {
+        navigate("/signin");
+      }, 2000);
     }
   };
-
-  // Generate JSX code for error message
-  const renderErrorMessage = (name) =>
-    name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
-    );
 
   // JSX code for login form
   const renderForm = (
@@ -75,54 +143,78 @@ const SignUp = () => {
         <div className="input-container">
           <label className="fw-bold">Email Address </label>
           <input
+            className="form-control"
             placeholder=" email@youremail.com"
             type="text"
             name="email"
             onChange={handleChange}
-            required
           />
-          {renderErrorMessage("email")}
+          {errors.email && <span className="error"> {errors.email} </span>}
         </div>
         <div className="input-container">
           <label className="fw-bold">First Name </label>
           <input
+            className="form-control"
             placeholder=" First Name"
             type="text"
             name="firstName"
             onChange={handleChange}
-            required
           />
+          {errors.firstName && (
+            <span className="error"> {errors.firstName} </span>
+          )}
         </div>
         <div className="input-container">
           <label className="fw-bold">Last Name </label>
           <input
+            className="form-control"
             placeholder=" Last Name"
             type="text"
             name="lastName"
             onChange={handleChange}
-            required
           />
+          {errors.lastName && (
+            <span className="error"> {errors.lastName} </span>
+          )}
+        </div>
+        <div className="input-container">
+          <label className="fw-bold">Phone Number </label>
+          <input
+            className="form-control"
+            placeholder=" 09050000333"
+            type="number"
+            name="phoneNumber"
+            onChange={handleChange}
+          />
+          {errors.phoneNumber && (
+            <span className="error"> {errors.phoneNumber} </span>
+          )}
         </div>
         <div className="input-container">
           <label className="fw-bold">Password </label>
           <input
+            className="form-control"
             placeholder=" password"
             type="password"
             name="password"
             onChange={handleChange}
-            required
           />
-          {renderErrorMessage("pass")}
+          {errors.password && (
+            <span className="error"> {errors.password} </span>
+          )}
         </div>
         <div className="input-container">
           <label className="fw-bold">Re-type your Password </label>
           <input
-            placeholder=" password"
+            className="form-control"
+            placeholder=" Confrim Password"
             type="password"
             name="passmatch"
-            required
+            onChange={handleChange}
           />
-          {renderErrorMessage("passnotmatch")}
+          {errors.passmatch && (
+            <span className="error"> {errors.passmatch} </span>
+          )}
         </div>
         <div className="button-container">
           <button className="login-button fw-bold" type="submit">
