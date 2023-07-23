@@ -46,6 +46,12 @@
     font-size: 18px!important;
     font-family: 'Rubik', sans-serif;
 }
+.hi {
+    color: black;
+    text-decoration: none;
+    font-size: 18px!important;
+    font-family: 'Rubik', sans-serif;
+}
 .signin_link_header:hover, .signup_link_header:hover {
     border-bottom: 2px solid green;
     font-weight: bold;

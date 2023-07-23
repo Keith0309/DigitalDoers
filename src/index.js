@@ -6,11 +6,14 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import reportWebVitals from './reportWebVitals';
 import routes from './route';
 import { RouterProvider } from 'react-router-dom';
+import AuthProvider from './AuthContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={routes} />
+    </AuthProvider>
   </React.StrictMode>
 );
 

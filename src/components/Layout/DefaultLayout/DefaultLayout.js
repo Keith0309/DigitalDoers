@@ -1,19 +1,12 @@
 import React from 'react';
 import Header from "../../Header/Header";
-import {useState} from 'React';
 
-const DefaultLayout = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [firstName, setFirstName] = useState('');
+const DefaultLayout = ({ children, isAuthenticated, firstName  }) => {
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    setFirstName('');
-  };
   
   return (
     <div >
-      <Header isAuthenticated={isAuthenticated} firstName={firstName} handleLogout={handleLogout} />
+      <Header isAuthenticated={isAuthenticated} firstName={firstName}/>
       <div>{children}</div>
     </div>
   );

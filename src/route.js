@@ -6,7 +6,6 @@ import Pharmacy from "./views/Pharmacy/Pharmacy";
 import Cart from "./views/Cart_Page/cart_page";
 import Profile from "./views/Profile/Profile";
 import EditProfile from "./views/EditProfile/EditProfile";
-import Home2 from "./views/Home/Home2";
 import ProductDescriptionPage from "./views/Item_Description/Item_Description";
 
 
@@ -22,7 +21,6 @@ const routes = createBrowserRouter([
   { path: "/cart", element: <Cart /> },
   { path: "/profile", element: <Profile /> },
   { path: "/editprofile", element: <EditProfile /> },
-  { path: "/home2", element: <Home2 /> },
 
   { path: "/:category/:product_name", element: <ProductDescriptionPage/> },
 ]);

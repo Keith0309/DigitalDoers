@@ -1,15 +1,15 @@
 import Footer2 from "../../components/Footer2/Footer2";
-import DLforHeader from "../../components/Layout/DLforHeader/DLforHeader";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 import blank_profile from "../../assets/images/profile.jpeg";
 import img_placeholder from "../../assets/images/imgp.png";
+import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 
 
 
 const Profile = () => {
   return (
-    <DLforHeader>
+    <DefaultLayout>
       <div className="container p-0">
         <div className="d-flex directory-div mt-2 py-1 ">
           <p className="directory-text d-flex ms-4 mt-2 fw-bold">
@@ -146,7 +146,7 @@ const Profile = () => {
       </div>
 
       <Footer2 />
-    </DLforHeader>
+    </DefaultLayout>
   );
 };
 
