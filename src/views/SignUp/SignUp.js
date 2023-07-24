@@ -8,21 +8,24 @@ import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const [errorMessages, setErrorMessages] = useState({});
   const [isAccountCreated, setisAccountCreated] = useState(false);
   const [values, setValues] = useState({
     email: "",
     firstName: "",
     lastName: "",
     phoneNumber: "",
+    address: "",
     password: "",
     passmatch: "",
+    
+    
   });
   const [errors, setErrors] = useState({
     email: "",
     firstName: "",
     lastName: "",
     phoneNumber: "",
+    address: "",
     password: "",
     passmatch: "",
   });
@@ -86,9 +89,17 @@ const SignUp = () => {
       }));
     } else {
       setErrors((prevErrors) => ({ ...prevErrors, phoneNumber: "" }));
-      console.log(values.phoneNumber);
     }
 
+    if (!values.address) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        address: "Address should not be empty",
+      }));
+    } else {
+      setErrors((prevErrors) => ({ ...prevErrors, address: "" }));
+    }
+    
     if (!values.password) {
       setErrors((prevErrors) => ({
         ...prevErrors,
@@ -122,6 +133,7 @@ const SignUp = () => {
       values.firstName &&
       values.lastName &&
       values.phoneNumber &&
+      values.address &&
       values.password &&
       values.password === values.passmatch
     ) {
@@ -132,7 +144,9 @@ const SignUp = () => {
       setisAccountCreated(true);
       setTimeout(() => {
         navigate("/signin");
-      }, 2000);
+      }, 1500);
+    } else {
+      console.log("Registration Failed!!");
     }
   };
 
@@ -188,6 +202,19 @@ const SignUp = () => {
           />
           {errors.phoneNumber && (
             <span className="error"> {errors.phoneNumber} </span>
+          )}
+        </div>
+        <div className="input-container">
+          <label className="fw-bold">Address </label>
+          <input
+            className="form-control"
+            placeholder=" Full Address"
+            type="text"
+            name="address"
+            onChange={handleChange}
+          />
+          {errors.address && (
+            <span className="error"> {errors.address} </span>
           )}
         </div>
         <div className="input-container">
