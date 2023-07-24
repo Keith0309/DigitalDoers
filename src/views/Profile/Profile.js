@@ -9,7 +9,7 @@ import { useAuth } from "../../AuthContext";
 
 
 const Profile = () => {
-  const { email, firstName, lastName, phoneNumber   } = useAuth();
+  const { email, firstName, lastName, phoneNumber, address } = useAuth();
 
   return (
     <DefaultLayout>
@@ -55,8 +55,7 @@ const Profile = () => {
                 <div className="col">
                   <h5 className="pt-4 fw-bold">Home Address</h5>
                   <h5 className="ps-4">
-                    John Doe 123 Main Street Barangay Santisima Trinidad
-                    Malolos, Bulacan 3000 Philippines
+                    {address}
                   </h5>
                 </div>
               </div>

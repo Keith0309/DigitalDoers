@@ -10,6 +10,7 @@ const AuthProvider = ({ children }) => {
   );
   const [email, setEmail] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
+  const [address, setAddress] = useState();
 
   const [firstName, setFirstName] = useState(
     localStorage.getItem("firstName") || ""
@@ -17,7 +18,6 @@ const AuthProvider = ({ children }) => {
   const [lastName, setLastName] = useState(
     localStorage.getItem("lastName") || ""
   );
-
 
   useEffect(() => {
     localStorage.setItem("isAuthenticated", isAuthenticated);
@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
     setIsAuthenticated(false); // Set isAuthenticated to false on logout
     // Clear the stored firstName, lastName on logout
     setFirstName("");
-    setLastName(""); 
+    setLastName("");
   };
 
   return (
@@ -52,6 +52,8 @@ const AuthProvider = ({ children }) => {
         phoneNumber,
         setPhoneNumber,
         handleLogout,
+        address,
+        setAddress,
       }}
     >
       {children}

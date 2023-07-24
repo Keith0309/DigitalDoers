@@ -16,6 +16,7 @@ const SignIn = () => {
     setEmail,
     setLastName,
     setPhoneNumber,
+    setAddress,
   } = useAuth();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [values, setValues] = useState({
@@ -60,6 +61,7 @@ const SignIn = () => {
             setFirstName(res.data.firstName);
             setLastName(res.data.lastName);
             setPhoneNumber(res.data.phoneNumber);
+            setAddress(res.data.address);
           } else {
             setNoRecordMessage(
               "Your email and password does not match. Please try again"
