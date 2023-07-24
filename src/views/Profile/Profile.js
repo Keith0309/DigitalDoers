@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import blank_profile from "../../assets/images/profile.jpeg";
 import img_placeholder from "../../assets/images/imgp.png";
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
+import { useAuth } from "../../AuthContext";
 
 
 
 const Profile = () => {
+  const { email, firstName, lastName, phoneNumber   } = useAuth();
+
   return (
     <DefaultLayout>
       <div className="container p-0">
@@ -21,7 +24,7 @@ const Profile = () => {
         </div>
       </div>
       <div className="container">
-        <h1 className="text-center fw-bold my-5">Your Profile</h1>
+        <h2 className="text-center fw-bold my-5">Your Profile</h2>
       </div>
       <div className="container rounded shadow mb-5">
         <div className="row">
@@ -34,27 +37,27 @@ const Profile = () => {
             ></img>
               <input type="file" id="uploadProfile" hidden/>
               <label for="uploadProfile" className="rounded upload-btn fs-5 border-0 pe-3 text-decoration-underline"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload Profile</label>
-            <h2 className="fw-bolder mt-5">David</h2>
-            <h2 className="fw-bolder">Mendoza</h2>
+            <h2 className="fw-bolder mt-5">{firstName}</h2>
+            <h2 className="fw-bolder">{lastName}</h2>
           </div>
           <div className="col-md-9 p-5 border border-2 rounded border-start-0">
             <h4 className="fw-bold border-bottom border-2 pb-3">INFORMATION</h4>
             <div className="row mb-5">
               <div className="col">
                 <h5 className="pt-4 fw-bold">Email</h5>
-                <h6 className="ps-4">davidmendoza@gmail.com</h6>
+                <h5 className="ps-4">{email}</h5>
               </div>
               <div className="col">
                 <h5 className="pt-4 fw-bold">Phone</h5>
-                <h6 className="ps-4">(+63) 935-999-9999</h6>
+                <h5 className="ps-4">{phoneNumber}</h5>
               </div>
               <div className="row">
                 <div className="col">
                   <h5 className="pt-4 fw-bold">Home Address</h5>
-                  <h6 className="ps-4">
+                  <h5 className="ps-4">
                     John Doe 123 Main Street Barangay Santisima Trinidad
                     Malolos, Bulacan 3000 Philippines
-                  </h6>
+                  </h5>
                 </div>
               </div>
             </div>

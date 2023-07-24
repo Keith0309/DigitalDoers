@@ -72,12 +72,12 @@ const Header = () => {
                 <div>
                   <Dropdown>
                     <Dropdown.Toggle className="hi bg-white text-black border-0 dropdown-toggle-split fw-bold">
-                      Hi!,
+                      Hi,
                       <Link
                         className="signin_link_header py-1 px-2"
                         to="/profile"
                       >
-                        {firstName}
+                        {firstName} !
                       </Link>
                     </Dropdown.Toggle>
                     <Dropdown.Menu className="dropdown-menu p-0">

@@ -9,8 +9,14 @@ import { useAuth } from "../../AuthContext";
 
 const SignIn = () => {
   const navigate = useNavigate();
-  const { setIsAuthenticated, setFirstName } = useAuth();
-  const [name, setName] =useState();
+  const {
+    setIsAuthenticated,
+    setFirstName,
+    firstName,
+    setEmail,
+    setLastName,
+    setPhoneNumber,
+  } = useAuth();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [values, setValues] = useState({
     email: "",
@@ -46,12 +52,14 @@ const SignIn = () => {
         .then((res) => {
           if (res.data.success) {
             setIsSubmitted(true);
-            setFirstName(res.data.firstName);
-            setName(res.data.firstName);
             setIsAuthenticated(true);
             setTimeout(() => {
               navigate("/");
-            }, 2000);
+            }, 1500);
+            setEmail(res.data.email);
+            setFirstName(res.data.firstName);
+            setLastName(res.data.lastName);
+            setPhoneNumber(res.data.phoneNumber);
           } else {
             setNoRecordMessage(
               "Your email and password does not match. Please try again"
@@ -142,7 +150,7 @@ const SignIn = () => {
                 </div>
 
                 <div className="text-center">
-                  <strong>{name}</strong> you have successfully logged in!
+                  <strong>{firstName}</strong> you have successfully logged in!
                 </div>
               </div>
             ) : (
