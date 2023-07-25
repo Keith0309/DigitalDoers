@@ -30,6 +30,10 @@ const Pharmacy = () => {
 
       {/* <Footer />
       <Footer2 /> */}
+
+      <footer>
+        <Footer2 />
+      </footer>
     </DefaultLayout>
   );
 };

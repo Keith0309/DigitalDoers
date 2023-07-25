@@ -7,6 +7,7 @@ import Cart from "./views/Cart_Page/cart_page";
 import Profile from "./views/Profile/Profile";
 import EditProfile from "./views/EditProfile/EditProfile";
 import ProductDescriptionPage from "./views/Item_Description/Item_Description";
+import AdminPanel from "./views/AdminPanel/AdminPanel";
 
 
 const routes = createBrowserRouter([
@@ -21,8 +22,9 @@ const routes = createBrowserRouter([
   { path: "/cart", element: <Cart /> },
   { path: "/profile", element: <Profile /> },
   { path: "/editprofile", element: <EditProfile /> },
-
   { path: "/:category/:product_name", element: <ProductDescriptionPage/> },
+
+  { path: "/admin", element: <AdminPanel/> },
 ]);
 
 export default routes;

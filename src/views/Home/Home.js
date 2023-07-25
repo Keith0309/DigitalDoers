@@ -94,8 +94,10 @@ const Home = () => {
 
       </div>
 
-      <Footer />
-      <Footer2 />
+      <footer>
+        <Footer />
+        <Footer2 />
+      </footer>
     </DefaultLayout>
   );
 };

@@ -1,0 +1,42 @@
+.add_cart_description { 
+        /* position: absolute;
+        bottom: 0px; */
+        display: flex;
+        margin-right: auto;
+        justify-content: center;
+        background-color: #008080;
+        font-weight: thin;
+        color: white;
+        border-radius: 0!important;
+}
+
+.add_cart_description:hover { 
+    background-color: #014b4b!important;
+    color: white;
+}
+
+.item_desc { 
+    width: 40%;
+}
+
+.counter_desc { 
+    justify-content: start !important;
+}
+
+footer {
+    position: relative;  ;
+    bottom: 0;
+    width: 100%;
+}
+
+.prod_img_desc {
+    height: 100%;
+}
+
+.itemPrice_desc {
+    font-size: 20px;
+}
+
+.itemName_desc  {
+    font-size: 2rem;
+}

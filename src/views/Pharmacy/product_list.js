@@ -3,12 +3,14 @@ import FilterSearch from './FilterSearch';
 import Results from './Results';
 import pharmacy_products from "../../assets/products_list/pharmacy_products"
 import "./product_list.css"
-const MainContent = () => {
+const MainContent = ( addToCart ) => {
 
   const [categories, setCategories] = useState(['Anti-depressant', 'Cold Remedies', 'Multivitamins']);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortOption, setSortOption] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+
+  const [cartItems, setCartItems] = useState([]);
   
 
   const handleCategoryChange = event => {
@@ -44,7 +46,8 @@ const MainContent = () => {
       <Results data={data}
         selectedCategory={selectedCategory}
         sortOption={sortOption}
-        searchTerm={searchTerm} />
+        searchTerm={searchTerm}
+        addToCart={addToCart} />
     </div>
 );
 

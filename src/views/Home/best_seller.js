@@ -19,28 +19,13 @@ const Best_Products = () => {
             </div>
             <div className="item_details">
               <div className="product_details">
-  
-                {/* <div className="item_name_container">
-                <a rel="noreferrer" href={item.id} className="text-decoration-none text-black" >
-                  <h5 className="item_name">{item.product_name}</h5>
-                </a>
-                </div> */}
 
                 <div className="item_name_container">
-                {/* <a rel="noreferrer" href={item.id} className="text-decoration-none text-black" >
-                  <h5 className="item_name">{item.product_name}</h5>
-                </a> */}
-
                 <Link className="text-decoration-none text-black" to={`/bestseller/${item.product_name}`}>
                 <h5 className="item_name">{item.product_name}</h5>
                 </Link>
                 </div>
-  
-                {/* <div className="item_description_container">
-                  <p className="item-description">
-                  Aliquam at sapien faucibus, gravida neque a, imperdiet nulla.
-                  </p>
-                </div> */}
+
   
                 <div className="product_price_container">
                 <p className="product_price">₱{item.price}</p>

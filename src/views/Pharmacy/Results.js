@@ -26,11 +26,10 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
     <div className="row row-cols-4">
       {sortedData.map(item => (
         <div className="card-container">
-          <a className="card_link" rel="noreferrer" target="_blank" href={`/${item.category.toLowerCase()}/${item.product_name}`}> 
         <div className="card" key={item.id}>
+        <a className="card_link" href={`/${item.category.toLowerCase()}/${item.product_name}`}> 
             <div className="card_img">
-            <img className="prod_img" src={item.image} alt="product_img"/>
-
+            <img className="prod_img" src={item.image} alt={item.product_name}/>
             </div>
             <div className="item_details">
               <div className="product_details">
@@ -57,16 +56,20 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
                   </p>
                 </div> */}
   
-                <div className="product_price_container">
+                <div className="product_price_container text-decoration-none text-black">
                 <p className="product_price">₱{item.price}</p>
                 </div>
   
               </div>
   
-              <div className="btn add_cart">Add to Cart</div>
+              
             </div>
+            </a>
+            <div>
+              <button className="btn add_cart" >Add to Cart</button>
+              </div>
           </div>
-          </a>
+
         </div>
       ))}
     </div>

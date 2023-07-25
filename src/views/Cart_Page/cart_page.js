@@ -1,16 +1,17 @@
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
-import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import "./cart_page.css"
-import product_01 from "../../assets/images/cart_products/product_01.png"
-import product_02 from "../../assets/images/cart_products/product_02.png"
-import Counter from "./counter.js"
-import RemoveButton from "./remove.js"
-import Footer2 from "../../components/Footer2/Footer2";
-import { Button } from "bootstrap";
+import { useState } from "react";
+
+// import Footer from "../../components/Footer/Footer";
+// import product_01 from "../../assets/images/cart_products/product_01.png"
+// import product_02 from "../../assets/images/cart_products/product_02.png"
+// import Counter from "./counter.js"
+// import RemoveButton from "./remove.js"
+// import Footer2 from "../../components/Footer2/Footer2";
+// import { Button } from "bootstrap";
 
 const Cart = ()=> {
-
     return (
         <DefaultLayout >
 
@@ -25,7 +26,7 @@ const Cart = ()=> {
             </p>
             </div>
 
-            <div className="cart-div">
+            {/* <div className="cart-div">
             <table className="cart-table mx-auto">
                 <thead className="cart-header">
                     <tr>
@@ -52,8 +53,8 @@ const Cart = ()=> {
                     <td>P55.00</td>
                     <td>
                     <div>
-                        {/* <h3>{item.name}</h3>
-                        <p>Price: ${item.price}</p> */}
+                        <h3>{item.name}</h3>
+                        <p>Price: ${item.price}</p>
                         <Counter />
                     </div>
                     </td>
@@ -69,8 +70,11 @@ const Cart = ()=> {
                 <button className="checkout_btn "> Proceed to Checkout </button>
             </div>
 
-            </div>
+            </div> */}
 
+        <div>
+        <h1>Cart Page</h1>
+        </div>
 
             
             </div>

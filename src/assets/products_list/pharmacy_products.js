@@ -7,7 +7,7 @@ const pharmacy_products = [
             description: "Treatment of major depressive episodes, panic disorder w/ or w/o agoraphobia, social anxiety disorder & obsessive-compulsive disorder.",
             price: 22.50,
             currency: "₱",
-            image: "./product_images/1_Escivex_10mg_Tablet.png",
+            image: "../product_images/1_Escivex_10mg_Tablet.png",
             category: "Anti-depressant"
         },
         {
@@ -16,7 +16,7 @@ const pharmacy_products = [
             description: "For the treatment of schizophrenia and other psychoses.",
             price: 53.60,
             currency: "₱",
-            image: "./product_images/2_Risdin_2mg_Tablet.png",
+            image: "../product_images/2_Risdin_2mg_Tablet.png",
             category: "Anti-depressant",
 
         },
@@ -26,7 +26,7 @@ const pharmacy_products = [
             description: "Treatment of major depressive disorder (MDD), social anxiety disorder (SAD) or social phobia, generalized anxiety disorder (GAD), obsessive-compulsive disorder (OCD), panic disorder with or without agoraphobia",
             price: 52.00,
             currency: "₱",
-            image: "./product_images/3_ Jovia_10mg_Tablet.png",
+            image: "../product_images/3_ Jovia_10mg_Tablet.png",
             category: "Anti-depressant",
         },
         {
@@ -63,7 +63,7 @@ const pharmacy_products = [
             description: "For relief of cold and all its symptoms",
             price: 110.00,
             currency: "₱",
-            image: "./product_images/26_Neozep_Forte 10mg_2mg_500mg_Caplet_20s.png",
+            image: "../product_images/26_Neozep_Forte 10mg_2mg_500mg_Caplet_20s.png",
             category: "Cold Remedies"
         },
         {
@@ -72,7 +72,7 @@ const pharmacy_products = [
             description: "For treatment of sinusitis and related conditions.",
             price: 18.75,
             currency: "₱",
-            image: "./product_images/27_Sinupret_Forte_Tablet.png",
+            image: "../product_images/27_Sinupret_Forte_Tablet.png",
             category: "Cold Remedies"
         },
         {
@@ -90,7 +90,7 @@ const pharmacy_products = [
             description: "No drowse relief from cold and sinusitis",
             price: 72.50,
             currency: "₱",
-            image: "./product_images/29_No-Drowse_Decolgen_25mg_500mg_Tablet_10s.png",
+            image: "../product_images/29_No-Drowse_Decolgen_25mg_500mg_Tablet_10s.png",
             category: "Cold Remedies"
         },
 
@@ -100,7 +100,7 @@ const pharmacy_products = [
             description: "A once-a-day multivitamin that helps support muscle health, healthy skin, immunity and energy",
             price: 290.00,
             currency: "₱",
-            image: "./product_images/49_Centrum_Advance_Multivitamins_Minerals_Tablets_30s.png",
+            image: "../product_images/49_Centrum_Advance_Multivitamins_Minerals_Tablets_30s.png",
             category: "Multivitamins"
         },    
         {
@@ -109,7 +109,7 @@ const pharmacy_products = [
             description: "For the prevention and treatment of Vitamin E deficiency",
             price: 352.50,
             currency: "₱",
-            image: "./product_images/50_Myra_E_400_IU_Capsule_30s.png",
+            image: "../product_images/50_Myra_E_400_IU_Capsule_30s.png",
             category: "Multivitamins"
         },
         {
@@ -118,7 +118,7 @@ const pharmacy_products = [
             description: "For adults specially crafted for healthy aging 50+, contains vitamins & mineral supplements to support immunity & muscle function",
             price: 360.00,
             currency: "₱",
-            image: "./product_images/51_Centrum_Silver_Multivitamins_Minerals_Tablets_30s.png",
+            image: "../product_images/51_Centrum_Silver_Multivitamins_Minerals_Tablets_30s.png",
             category: "Multivitamins"
         },
         {
@@ -127,7 +127,7 @@ const pharmacy_products = [
             description: "For normal nerve function and as adjunct in the management of neuromuscular pain.",
             price: 93.50,
             currency: "₱",
-            image: "./product_images/52_Pharex_Vitamin_B_Complex_Tablet_Tipid_Pack_17_3s.png",
+            image: "../product_images/52_Pharex_Vitamin_B_Complex_Tablet_Tipid_Pack_17_3s.png",
             category: "Multivitamins"
         },
         {
