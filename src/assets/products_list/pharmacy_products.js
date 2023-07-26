@@ -35,7 +35,7 @@ const pharmacy_products = [
             description: "For the treatment of generalized, partial or other epilepsy, treatment and prevention of mania associated with bipolar disorders.",
             price: 31.60,
             currency: "₱",
-            image: "./product_images/4_Valpros_500mg_Tablet.png",
+            image: "../product_images/4_Valpros_500mg_Tablet.png",
             category: "Anti-depressant"
         },
         {
@@ -44,7 +44,7 @@ const pharmacy_products = [
             description: "For the treatment of generalized, partial or other epilepsy, treatment and prevention of mania associated with bipolar disorders.",
             price: 290.50,
             currency: "₱",
-            image: "./product_images/5_Valpros_Pedia_200mg_5mg_Syrup.png",
+            image: "../product_images/5_Valpros_Pedia_200mg_5mg_Syrup.png",
             category: "Anti-depressant"
         },
 

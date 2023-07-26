@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+
 
 const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
+  const [products, setProducts] = useState([]);
+
+   // Fetch the product data from the backend API
+   useEffect(() => {
+    axios.get('http://localhost:3001/getproducts') 
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching products:', error);
+      });
+  }, []);
+
   const filteredData = data.filter(item => {
     const matchesCategory = selectedCategory === '' || item.category === selectedCategory;
     const matchesSearch = item.product_name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -24,40 +39,22 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
 
   return (
     <div className="row row-cols-4">
-      {sortedData.map(item => (
+      {products.map(product => (
         <div className="card-container">
-        <div className="card" key={item.id}>
-        <a className="card_link" href={`/${item.category.toLowerCase()}/${item.product_name}`}> 
+        <div className="card" key={product.id}>
+        <a className="card_link" href={`/${product.category}.toLowerCase()}/${product.product_name}`}> 
             <div className="card_img">
-            <img className="prod_img" src={item.image} alt={item.product_name}/>
+            <img className="prod_img" src={'http://localhost:3001/product_images/'+product.product_image} alt={product.product_name}/>
             </div>
             <div className="item_details">
               <div className="product_details">
-  
-                {/* <div className="item_name_container">
-                <a rel="noreferrer" href={item.id} className="text-decoration-none text-black" >
-                  <h5 className="item_name">{item.product_name}</h5>
-                </a>
-                </div> */}
-
                 <div className="item_name_container">
-                {/* <a rel="noreferrer" href={item.id} className="text-decoration-none text-black" >
-                  <h5 className="item_name">{item.product_name}</h5>
-                </a> */}
-
-                <Link className="text-decoration-none text-black" to={`/${item.category.toLowerCase()}/${item.product_name}`}>
-                <h5 className="item_name">{item.product_name}</h5>
+                <Link className="text-decoration-none text-black" to={`/${product.category}.toLowerCase()}/${product.product_name}`}>
+                <h5 className="item_name">{product.product_name}</h5>
                 </Link>
                 </div>
-  
-                {/* <div className="item_description_container">
-                  <p className="item-description">
-                  Aliquam at sapien faucibus, gravida neque a, imperdiet nulla.
-                  </p>
-                </div> */}
-  
                 <div className="product_price_container text-decoration-none text-black">
-                <p className="product_price">₱{item.price}</p>
+                <p className="product_price">₱{product.price}</p>
                 </div>
   
               </div>
