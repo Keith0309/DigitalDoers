@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import FilterSearch from './FilterSearch';
 import Results from './Results';
-import pharmacy_products from "../../assets/products_list/pharmacy_products"
+import Pharmacy_Products from "../../assets/products_list/pharmacy_products"
 import "./product_list.css"
 const MainContent = ( addToCart ) => {
 
-  const [categories, setCategories] = useState(['Anti-depressant', 'Cold Remedies', 'Multivitamins']);
+  const products = Pharmacy_Products();
+  const [categories, setCategories] = useState(['Anti-depressants', 'Cold Remedies', 'Multivitamins']);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [sortOption, setSortOption] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const [cartItems, setCartItems] = useState([]);
   
 
   const handleCategoryChange = event => {
@@ -29,8 +29,7 @@ const MainContent = ( addToCart ) => {
     setSearchTerm('');
   };
 
-  const data = pharmacy_products;
-  
+  const data = products;
   return (
     <div>
       <FilterSearch

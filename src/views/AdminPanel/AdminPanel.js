@@ -1,8 +1,11 @@
 import React, { useState, useRef } from "react";
 import "./AdminPanel.css";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AdminPanel = () => {
+  
   const initialFormState = {
     product_name: "",
     description: "",
@@ -31,7 +34,15 @@ const AdminPanel = () => {
     axios
       .post("http://localhost:3001/addproduct", formdata)
       .then((res) => {
-        alert("Successfully Added a Product")
+        toast.success('Successfully Added a Product', {
+          position: 'top-right',
+          autoClose: 1500, // Time in milliseconds to automatically close the notification
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
       })
       .catch((err) => console.log(err));
 
@@ -43,7 +54,7 @@ const AdminPanel = () => {
   return (
     <div>
       <div className="m-3">
-        <h1>Admin Panel</h1>
+        <h1>Add Product Page</h1>
       </div>
 
       <div className="d-flex justify-content-center">
@@ -147,6 +158,7 @@ const AdminPanel = () => {
           </div>
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };

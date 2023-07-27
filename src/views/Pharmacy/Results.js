@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 
+const Results = ({ data, selectedCategory, sortOption, searchTerm,  }) => {
 
-const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
-  const [products, setProducts] = useState([]);
-
-   // Fetch the product data from the backend API
-   useEffect(() => {
-    axios.get('http://localhost:3001/getproducts') 
-      .then(response => {
-        setProducts(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching products:', error);
-      });
-  }, []);
 
   const filteredData = data.filter(item => {
     const matchesCategory = selectedCategory === '' || item.category === selectedCategory;
@@ -29,6 +16,7 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
     } else if (sortOption === 'name') {
     return a.product_name.localeCompare(b.product_name);
     }
+    return 0;
   });
 
   if (sortedData.length === 0) {
@@ -39,22 +27,22 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm }) => {
 
   return (
     <div className="row row-cols-4">
-      {products.map(product => (
+      {sortedData.map(item => (
         <div className="card-container">
-        <div className="card" key={product.id}>
-        <a className="card_link" href={`/${product.category}.toLowerCase()}/${product.product_name}`}> 
+        <div className="card" key={item.id}>
+        <a className="card_link" href={`/${item.category.toLowerCase()}/${item.product_name}`}> 
             <div className="card_img">
-            <img className="prod_img" src={'http://localhost:3001/product_images/'+product.product_image} alt={product.product_name}/>
+            <img className="prod_img" src={'http://localhost:3001/product_images/'+item.product_image} alt={item.product_name}/>
             </div>
             <div className="item_details">
               <div className="product_details">
                 <div className="item_name_container">
-                <Link className="text-decoration-none text-black" to={`/${product.category}.toLowerCase()}/${product.product_name}`}>
-                <h5 className="item_name">{product.product_name}</h5>
+                <Link className="text-decoration-none text-black" to={`/${item.category.toLowerCase()}/${item.product_name}`}>
+                <h5 className="item_name">{item.product_name}</h5>
                 </Link>
                 </div>
                 <div className="product_price_container text-decoration-none text-black">
-                <p className="product_price">₱{product.price}</p>
+                <p className="product_price">₱{item.price}</p>
                 </div>
   
               </div>

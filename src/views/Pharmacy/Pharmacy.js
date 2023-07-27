@@ -1,4 +1,4 @@
-import Footer from "../../components/Footer/Footer";
+
 import Footer2 from "../../components/Footer2/Footer2";
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import "./Pharmacy.css";
@@ -31,7 +31,7 @@ const Pharmacy = () => {
       {/* <Footer />
       <Footer2 /> */}
 
-      <footer>
+      <footer className="pt-5 mt-5">
         <Footer2 />
       </footer>
     </DefaultLayout>
