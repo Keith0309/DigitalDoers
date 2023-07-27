@@ -1,8 +1,11 @@
 import React from 'react';
+import { useAuth } from "../../AuthContext";
 import { Link } from 'react-router-dom';
 
 const Results = ({ data, selectedCategory, sortOption, searchTerm,  }) => {
 
+  const { addToCart } = useAuth();
+  
 
   const filteredData = data.filter(item => {
     const matchesCategory = selectedCategory === '' || item.category === selectedCategory;
@@ -51,7 +54,7 @@ const Results = ({ data, selectedCategory, sortOption, searchTerm,  }) => {
             </div>
             </a>
             <div>
-              <button className="btn add_cart" >Add to Cart</button>
+              <button className="btn add_cart" onClick={() => addToCart(item)} >Add to Cart</button>
               </div>
           </div>
 
