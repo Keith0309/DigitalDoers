@@ -9,6 +9,7 @@ import EditProfile from "./views/EditProfile/EditProfile";
 import ProductDescriptionPage from "./views/Item_Description/Item_Description";
 import AdminPanel from "./views/AdminPanel/AdminPanel";
 import ProductTable from "./views/ProductTable/ProductTable";
+import NotFound from "./views/Page404/NotFound";
 
 
 const routes = createBrowserRouter([
@@ -16,10 +17,10 @@ const routes = createBrowserRouter([
   { path: "/signin", element: <SignIn /> },
   { path: "/signup", element: <SignUp /> },
   { path: "/pharmacy", element: <Pharmacy /> },
-  { path: "/medicine_health", element: <Pharmacy /> },
-  { path: "/vitamins_supplements", element: <Pharmacy /> },
-  { path: "/nutrition_fitness", element: <Pharmacy /> },
-  { path: "/shopall", element: <Pharmacy /> },
+  { path: "/medicine_health", element: <NotFound /> },
+  { path: "/vitamins_supplements", element: <NotFound /> },
+  { path: "/nutrition_fitness", element: <NotFound /> },
+  { path: "/shopall", element: <NotFound /> },
   { path: "/cart", element: <Cart /> },
   { path: "/profile", element: <Profile /> },
   { path: "/editprofile", element: <EditProfile /> },

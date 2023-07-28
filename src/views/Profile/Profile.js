@@ -2,7 +2,7 @@ import Footer2 from "../../components/Footer2/Footer2";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 import blank_profile from "../../assets/images/profile.jpeg";
-import img_placeholder from "../../assets/images/imgp.png";
+
 import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import { useAuth } from "../../AuthContext";
 
@@ -60,37 +60,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <h4 className="fw-bold border-bottom border-2 pb-3">Files</h4>
-            <div className="row text-center">
-              <div className="col">
-                <h5 className="pt-4 fw-bold">Prescription</h5>
-                <img
-                  className="rounded w-75 py-2"
-                  src={img_placeholder}
-                  alt="Profile_Picture"
-                  draggable="false"
-                ></img>
-              </div>
-              <div className="col">
-                <h5 className="pt-4 fw-bold">PWD/Senior ID</h5>
-                <img
-                  className="rounded w-75 py-2"
-                  src={img_placeholder}
-                  alt="Profile_Picture"
-                  draggable="false"
-                ></img>
-              </div>
-            </div>
-            <div className="row text-center mt-3">
-              <div className="col">
-                <input type="file" id="uploadPrescription" hidden/>
-                <label for="uploadPrescription" className="rounded upload-btn fs-5 border-0 pe-3"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
-              </div>
-              <div className="col">
-                <input type="file" id="uploadPwd" hidden/>
-              <label for="uploadPwd" className="rounded upload-btn fs-5 border-0 pe-3"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload File</label>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
