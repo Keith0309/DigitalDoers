@@ -19,14 +19,9 @@ const Counter = ({ initialQuantity, onChange }) => {
     if (!isNaN(parsedValue)) {
       onChange(parsedValue);
     }
-    handleQuantityChange(count);
   };
 
-  // const handleInputChange = (event) => {
-  //   const inputValue = event.target.value;
-  //   setCount(inputValue);
-  //   handleChange(inputValue); // Pass the input value to the parent component (Cart_page)
-  // };
+
 
   const counterStyle = { 
     display: "flex",

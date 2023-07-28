@@ -5,8 +5,6 @@ import DefaultLayout from "../../components/Layout/DefaultLayout/DefaultLayout";
 import Counter from "./counter.js";
 import RemoveButton from "./remove.js";
 import "./cart_page.css";
-import Pharmacy_Products from "../../assets/products_list/pharmacy_products";
-import img_placeholder from "../../assets/images/imgp.png";
 
 const Cart = () => {
   const { isAuthenticated, cartItems, setCartItems } = useAuth();
@@ -26,7 +24,6 @@ const Cart = () => {
     setisEmpty(cartItems.length === 0);
   }, [cartItems]);
 
-  ////////////////////////////////
 
   return (
     <DefaultLayout>
