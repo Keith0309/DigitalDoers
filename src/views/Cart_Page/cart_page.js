@@ -7,9 +7,18 @@ import RemoveButton from "./remove.js";
 import "./cart_page.css";
 
 const Cart = () => {
-  const { isAuthenticated, cartItems } = useAuth();
-
+  const { isAuthenticated, cartItems, setCartItems } = useAuth();
   const [isEmpty, setisEmpty] = useState(false);
+
+  const handleQuantityChange = (itemId, newQuantity) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, quantity: newQuantity };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  };
 
   useEffect(() => {
     setisEmpty(cartItems.length === 0);
@@ -62,11 +71,11 @@ const Cart = () => {
                       />
                     </td>
                     <td>{item.product_name}</td>
-                    <td>{item.price}</td>
+                    <td>₱{item.price}</td>
                     <td>
-                      <Counter />
+                    <Counter initialQuantity={item.quantity} onChange={(newQuantity) => handleQuantityChange(item.id, newQuantity)} />
                     </td>
-                    <td>{item.price}</td>
+                    <td>₱{(item.price * item.quantity).toFixed(2)}</td>
                     <td>
                       {" "}
                       <RemoveButton />
@@ -76,21 +85,26 @@ const Cart = () => {
               </tbody>
             </table>
             {isAuthenticated ? (
-            <div className=" checkout_container d-flex justify-content-end mt-3">
-              <button className="checkout_btn "> Proceed to Checkout </button>
-            </div>
+              <div className=" checkout_container d-flex justify-content-end mt-3">
+                <button className="checkout_btn "> Proceed to Checkout </button>
+              </div>
             ) : (
-            <div className=" checkout_container d-flex justify-content-end mt-3">
-              <button className="checkout_btn "><Link className="text-decoration-none text-white" to="/signin"> Proceed to Checkout </Link></button>
-            </div>
+              <div className=" checkout_container d-flex justify-content-end mt-3">
+                <button className="checkout_btn ">
+                  <Link
+                    className="text-decoration-none text-white"
+                    to="/signin"
+                  >
+                    {" "}
+                    Proceed to Checkout{" "}
+                  </Link>
+                </button>
+              </div>
             )}
             <div className="mt-5 pt-5"></div>
           </div>
         )}
-       
       </div>
-
-      
     </DefaultLayout>
   );
 };

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Counter = () => {
-  const [count, setCount] = useState(1);
+const Counter = ({ initialQuantity, onChange }) => {
+  
 
   const handleIncrement = () => {
-    setCount(count + 1);
+    onChange(initialQuantity + 1);
   };
 
   const handleDecrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
+    if (initialQuantity > 1) {
+      onChange(initialQuantity - 1);
     }
   };
 
@@ -17,7 +17,7 @@ const Counter = () => {
     const { value } = event.target;
     const parsedValue = parseInt(value, 10);
     if (!isNaN(parsedValue)) {
-      setCount(parsedValue);
+      onChange(parsedValue);
     }
   };
 
@@ -52,7 +52,7 @@ const Counter = () => {
       <button style={decreaseStyle} className='mx-2 text-white' onClick={handleDecrement}>
       <i className="bi bi-chevron-left"></i>
       </button>
-      <input style={inputStyle} type="text" value={count} onChange={handleChange} />
+      <input style={inputStyle} type="text" value={initialQuantity} onChange={handleChange} />
       <button style={increaseStyle} className='mx-2 text-white' onClick={handleIncrement}>
       <i className="bi bi-chevron-right"></i>
       </button>
