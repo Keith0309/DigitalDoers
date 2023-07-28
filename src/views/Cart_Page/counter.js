@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-const Counter = () => {
-  const [count, setCount] = useState(0);
+const Counter = ({handleQuantityChange}) => {
+  const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
     setCount(count + 1);
   };
 
   const handleDecrement = () => {
-    if (count > 0) {
+    if (count > 1) {
       setCount(count - 1);
     }
   };
@@ -19,7 +19,14 @@ const Counter = () => {
     if (!isNaN(parsedValue)) {
       setCount(parsedValue);
     }
+    handleQuantityChange(count);
   };
+
+  // const handleInputChange = (event) => {
+  //   const inputValue = event.target.value;
+  //   setCount(inputValue);
+  //   handleChange(inputValue); // Pass the input value to the parent component (Cart_page)
+  // };
 
   const counterStyle = { 
     display: "flex",
