@@ -37,8 +37,8 @@ const Profile = () => {
             ></img>
               <input type="file" id="uploadProfile" hidden/>
               <label for="uploadProfile" className="rounded upload-btn fs-5 border-0 pe-3 text-decoration-underline"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload Profile</label>
-            <h2 className="fw-bolder mt-5">{firstName}</h2>
-            <h2 className="fw-bolder">{lastName}</h2>
+            <h2 className="fname_profile fw-bolder mt-5">{firstName}</h2>
+            <h2 className="lname_profile fw-bolder">{lastName}</h2>
           </div>
           <div className="col-md-9 p-5 border border-2 rounded border-start-0">
             <h4 className="fw-bold border-bottom border-2 pb-3">INFORMATION</h4>

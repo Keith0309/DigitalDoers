@@ -1,16 +1,18 @@
 import React , {useState, useEffect} from 'react'
 import { useAuth } from '../../AuthContext';
 import "./CheckoutPage.css"
+import paymentmethod from "../../assets/images/USPaymentMethodsKlarna.jpeg"
 
 
 const CheckoutContainer = () => {
-
 
     const { isAuthenticated, cartItems } = useAuth();
     const [isEmpty, setisEmpty] = useState(false);
     useEffect(() => {
         setisEmpty(cartItems.length === 0);
       }, [cartItems]);
+
+      const [totalAmount, setTotalAmount] = useState();
 
 
     const initialFormData = {
@@ -21,6 +23,8 @@ const CheckoutContainer = () => {
         city: '',
         zipCode: '',
         paymentCard: '',
+        secCode: '',
+        expDate:'',
       };
     
       const [formData, setFormData] = useState(initialFormData);
@@ -63,11 +67,12 @@ const CheckoutContainer = () => {
       };
 
   return (
-    <div class>
+    <div>
+         <form onSubmit={handleSubmit}>
     <div className='d-flex justify-content-center'>
         <div className='bg-light p-4 mt-2 mx-2'>
             <h1>Contact Information</h1>
-            <form onSubmit={handleSubmit}>
+           
                 <h5 className='fw-bold'>Personal Information</h5>
             <div className='mb-3 d-flex'>
                 <div className='me-3'>
@@ -150,7 +155,10 @@ const CheckoutContainer = () => {
                     <label>
                     Card Information
                     </label>
-                    <input type="text" name="zipCode" 
+                    <div>
+                    <img src={paymentmethod} alt="payment_method" className='paymentMethod my-2'></img>
+                    </div>
+                    <input type="text" name="paymentCard" 
                     className='form-control'
                     value={formData.paymentCard} onChange={handleChange} placeholder="4242 4242 4242 4242" />
                     
@@ -161,49 +169,73 @@ const CheckoutContainer = () => {
                 <div className='me-3'>
                     <input
                         type="text"
-                        name="firstName"
+                        name="expDate"
                         className='form-control'
-                        value={formData.firstName}
+                        value={formData.expDate}
                         onChange={handleChange}
                         placeholder='Expiration date'
                     />
 
-                    {formErrors.firstName && <span className="error">{formErrors.firstName}</span>}
+                    {formErrors.expDate && <span className="error">{formErrors.expDate}</span>}
                 </div>
 
                 <div>
                     <input
                         type="text"
-                        name="lastName"
+                        name="secCode"
                         className='form-control'
-                        value={formData.lastName}
+                        value={formData.secCode}
                         onChange={handleChange}
                         placeholder='Security Code'
                     />
 
-                    {formErrors.lastName && <span className="error">{formErrors.lastName}</span>}
+                    {formErrors.secCode && <span className="error">{formErrors.secCode}</span>}
                 </div>
                 </div>
 
 
-                <button type="submit">Place Order</button>
                 {isSubmitted && <p>Form submitted successfully!</p>}
-            </form>
+            
         </div>
 
         <div className='bg-light p-4 my-2 mx-2'>
             <h1>Total</h1>
             <div>
             {cartItems.map((item) => (
-                <li className='mb-2 '>{item.product_name} - quantity - subtotal </li>
-            ))}s
+                <div key={item.id}>
+                <li className='mb-2 '>{item.product_name}</li>   
+                <div className='d-flex justify-content-end'>
+                <p className='fw-bolder'> x{item.quantity} - <span>{(item.price * item.quantity).toFixed(2)}</span></p>
+                </div>
+                </div>
+
+                
+            ))}
 
             <div className='totalAmount'>
-            <p className='totalAmount'>Total Amount: Total Amount </p>
+            <p className='totalAmount'>Total Amount:  {totalAmount} </p>
+            </div>
+
+            <div >
+                <div className='mb-2'>
+                <input type="file" id="uploadPrescription" hidden/>
+                <label for="uploadPrescription" className="text-center w-100 rounded upload-btn fs-5 border-0 p-2 text-decoration-none"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload Prescription</label>
+                </div>
+                
+                <div>
+                <input type="file" id="uploadID" hidden/>
+                <label for="uploadID" className="w-100 text-center rounded upload-btn fs-5 border-0 p-2 text-decoration-none"><i className="bi bi-file-earmark-arrow-up-fill mx-2"></i>Upload PWD/Senior ID</label>
+                </div>
+            </div>
+
+            <div className=" checkout_container d-flex justify-content-center mt-5">
+                <button className=" w-50 checkout_btn"> Place Order </button>
             </div>
             </div>
         </div>
+        
     </div>
+    </form>
     </div>
   )
 }
