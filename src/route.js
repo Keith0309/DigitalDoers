@@ -10,6 +10,7 @@ import ProductDescriptionPage from "./views/Item_Description/Item_Description";
 import AdminPanel from "./views/AdminPanel/AdminPanel";
 import ProductTable from "./views/ProductTable/ProductTable";
 import NotFound from "./views/Page404/NotFound";
+import CheckoutPage from "./views/CheckoutPage/CheckoutPage";
 
 
 const routes = createBrowserRouter([
@@ -25,9 +26,11 @@ const routes = createBrowserRouter([
   { path: "/profile", element: <Profile /> },
   { path: "/editprofile", element: <EditProfile /> },
   { path: "/:category/:product_name", element: <ProductDescriptionPage/> },
+  { path: "/checkout", element: <CheckoutPage/> },
 
   { path: "/admin", element: <AdminPanel/> },
   { path: "/ProductTable", element: <ProductTable/> },
+
 ]);
 
 export default routes;
