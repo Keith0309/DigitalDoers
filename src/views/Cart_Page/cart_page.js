@@ -63,7 +63,7 @@ const Cart = () => {
                   <tr key={item.id}>
                     <td>
                       <img
-                        className="product_image"
+                        className="product_image m-3"
                         src={
                           "http://localhost:3001/product_images/" +
                           item.product_image
@@ -87,7 +87,22 @@ const Cart = () => {
             </table>
             {isAuthenticated ? (
               <div className=" checkout_container d-flex justify-content-end mt-3">
-                <button className="checkout_btn "> Proceed to Checkout </button>
+
+                <button className="checkout_btn me-3"> <Link
+                    className="text-decoration-none text-white"
+                    to="/pharmacy"
+                  >
+                    {" "}
+                    Add Items{" "}
+                  </Link> </button>
+
+                <button className="checkout_btn "> <Link
+                    className="text-decoration-none text-white"
+                    to="/checkout"
+                  >
+                    {" "}
+                    Proceed to Checkout{" "}
+                  </Link> </button>
               </div>
             ) : (
               <div className=" checkout_container d-flex justify-content-end mt-3">

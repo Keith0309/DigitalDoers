@@ -16,11 +16,20 @@
   background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
+
+.pp { 
+  width: 175px!important;
+  height: 175px!important;
+}
 .pp:hover {
   opacity: 0.9;
   cursor: pointer;
 }
 .dropdown-toggle-custom::after {
   content: none;
+}
+
+.fname_profile, .lname_profile { 
+  font-size: 18px!important;
 }
 
