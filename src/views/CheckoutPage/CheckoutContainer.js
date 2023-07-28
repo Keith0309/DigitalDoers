@@ -12,7 +12,7 @@ const CheckoutContainer = () => {
         setisEmpty(cartItems.length === 0);
       }, [cartItems]);
 
-      const [totalAmount, setTotalAmount] = useState();
+let totalAmount = 0;
 
 
     const initialFormData = {
@@ -204,16 +204,20 @@ const CheckoutContainer = () => {
             {cartItems.map((item) => (
                 <div key={item.id}>
                 <li className='mb-2 '>{item.product_name}</li>   
-                <div className='d-flex justify-content-end'>
-                <p className='fw-bolder'> x{item.quantity} - <span>{(item.price * item.quantity).toFixed(2)}</span></p>
+                  <div className='d-flex justify-content-end'>
+                  <p className='fw-bolder'> x{item.quantity} - <span>₱{(item.price * item.quantity).toFixed(2)}</span></p>
+                  </div>
+                  <div className='d-none'>
+                  {totalAmount += item.price * item.quantity}
+                  </div>
                 </div>
-                </div>
+                
 
                 
             ))}
 
             <div className='totalAmount'>
-            <p className='totalAmount'>Total Amount:  {totalAmount} </p>
+            <p className='totalAmount'>Total Amount:  ₱{(totalAmount).toFixed(2)} </p>
             </div>
 
             <div >

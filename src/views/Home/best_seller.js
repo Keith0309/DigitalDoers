@@ -10,7 +10,7 @@ const Best_Products = () => {
   return (
     <div className="row row-cols-3 justify-content-center">
         {products.map((item) => (
-          <div className="card-container">
+          <div className="card-container" key={item.id}>
           <a className="card_link" rel="noreferrer" target="_blank" href={`bestseller/${item.product_name}`}> 
         <div className="card" key={item.id}>
             <div className="card_img">
@@ -21,9 +21,7 @@ const Best_Products = () => {
               <div className="product_details">
 
                 <div className="item_name_container">
-                <Link className="text-decoration-none text-black" to={`/bestseller/${item.product_name}`}>
                 <h5 className="item_name">{item.product_name}</h5>
-                </Link>
                 </div>
 
   
