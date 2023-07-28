@@ -1,19 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'; // Assuming you are using React Router for navigation
-import pharmacy_products from '../../assets/products_list/pharmacy_products';
-import Header from '../../components/Header/Header';
+import Pharmacy_Products from '../../assets/products_list/pharmacy_products';
 import { Link } from "react-router-dom";
-import Footer2 from '../../components/Footer2/Footer2';
 import './ItemDescription.css'
 import Counter from "../Cart_Page/counter.js"
 import DefaultLayout from '../../components/Layout/DefaultLayout/DefaultLayout';
 
 const ProductDescriptionPage = () => {
+  const products = Pharmacy_Products();
 
 
 
   const { product_name } = useParams();
-  const item = pharmacy_products.find((item) => item.product_name === String(product_name));
+  const item = products.find((item) => item.product_name === String(product_name));
 
   if (!item) {
     return <div>Product not found!</div>;
@@ -43,7 +42,7 @@ const ProductDescriptionPage = () => {
 
       <div key={item.id} className='d-flex justify-content-around mt-5'>
         <div className="card_img img_container">
-            <img className="prod_img_desc" src={item.image} alt={item.product_name}/>
+            <img className="prod_img_desc" src={'http://localhost:3001/product_images/'+item.product_image} alt={item.product_name}/>
         </div>
 
         <div className='item_desc'>
