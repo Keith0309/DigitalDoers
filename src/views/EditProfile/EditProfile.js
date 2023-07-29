@@ -45,14 +45,14 @@ const EditProfile = () => {
               <div className="col">
                 <h6 className="pt-4 fw-bold mb-4">First Name</h6>
                 <input
-                  className="w-50 rounded w-50 p-4 ms-5"
+                  className="w-50 rounded w-50 p-4 ms-5 form-control"
                   type="text"
                   value={fName}
                   onChange={(event) => setfName(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Last Name</h6>
                 <input
-                  className="w-50 rounded w-50 p-4 ms-5"
+                  className="w-50 rounded w-50 p-4 ms-5 form-control"
                   type="text"
                   value={lName}
                   onChange={(event) => setlName(event.target.value)}
@@ -65,27 +65,33 @@ const EditProfile = () => {
                 />
                 <h6 className="pt-4 fw-bold mb-4">Email</h6>
                 <input
-                  className="w-50 rounded w-50 p-3 ms-5"
+                  className="w-50 rounded w-50 p-3 ms-5 form-control"
                   type="email"
                   value={Email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Phone</h6>
                 <input
-                  className="w-50 rounded w-50 p-3 ms-5"
+                  className="w-50 rounded w-50 p-3 ms-5 form-control"
                   type="number"
                   value={phone}
                   onChange={(event) => setphone(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Address</h6>
                 <textarea
-                  className="w-50 rounded w-50 p-2 ms-5"
+                  className="w-50 rounded w-50 p-2 ms-5 form-control"
                   value={Address}
                   onChange={(event) => setAddress(event.target.value)}
                 />
               </div>
             </div>
             <div className="row mb-5">
+                                    <Link
+                        className="signin_link_header py-1 px-2"
+                        to="/profile"
+                      >
+                        {firstName} !
+                      </Link>
               <button className="rounded edit-btn fs-5 border-0 p-2 w-25 mx-2">
                 <i className="bi bi-x-square me-2 "></i>Cancel
               </button>
