@@ -11,10 +11,16 @@ const AuthProvider = ({ children }) => {
     localStorage.getItem("isAuthenticated") === "true"
   );
   const [email, setEmail] = useState(localStorage.getItem("email") || "");
-  const [phoneNumber, setPhoneNumber] = useState(localStorage.getItem("phoneNumber") || "");
+  const [phoneNumber, setPhoneNumber] = useState(
+    localStorage.getItem("phoneNumber") || ""
+  );
   const [address, setAddress] = useState(localStorage.getItem("address") || "");
-  const [firstName, setFirstName] = useState(localStorage.getItem("firstName") || "");
-  const [lastName, setLastName] = useState(localStorage.getItem("lastName") || "");
+  const [firstName, setFirstName] = useState(
+    localStorage.getItem("firstName") || ""
+  );
+  const [lastName, setLastName] = useState(
+    localStorage.getItem("lastName") || ""
+  );
 
   useEffect(() => {
     localStorage.setItem("isAuthenticated", isAuthenticated);
@@ -41,29 +47,29 @@ const AuthProvider = ({ children }) => {
   }, [address]);
 
   const handleLogout = () => {
-    setIsAuthenticated(false); // Set isAuthenticated to false on logout
-    // Clear the stored firstName, lastName on logout
+    setIsAuthenticated(false);
     setFirstName("");
     setLastName("");
     setPhoneNumber("");
     setAddress("");
+    setEmail("");
+    setCartItems([]);
   };
 
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    const cartData = JSON.parse(localStorage.getItem("cartData")) || { cartItems: [], email: "" };
+    setEmail(cartData.email);
+    return cartData.cartItems || [];
+  });
 
-  useEffect(() => {
-    const savedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    setCartItems(savedCartItems);
-  }, []);
-
-  useEffect(() => {
-    saveCartToLocalStorage(cartItems); // Call saveCartToLocalStorage whenever cartItems change
-  }, [cartItems]);
-
-  const saveCartToLocalStorage = (cartItems) => {
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  const saveCartToLocalStorage = (cartItems, email) => {
+    const cartData = { cartItems, email };
+    localStorage.setItem("cartData", JSON.stringify(cartData));
   };
 
+  useEffect(() => {
+    saveCartToLocalStorage(cartItems, email);
+  }, [cartItems, email]);
 
   const addToCart = (item) => {
     const existingItemIndex = cartItems.findIndex(
@@ -83,7 +89,10 @@ const AuthProvider = ({ children }) => {
         progress: undefined,
       });
     } else {
-      setCartItems((prevCartItems) => [...prevCartItems, { ...item, quantity: 1 }]);
+      setCartItems((prevCartItems) => [
+        ...prevCartItems,
+        { ...item, quantity: 1 },
+      ]);
       toast.success("Successfully Added to Cart", {
         position: "top-right",
         autoClose: 1000,
@@ -94,7 +103,15 @@ const AuthProvider = ({ children }) => {
         progress: undefined,
       });
     }
+    // Save cart items to local storage after updating state
+    saveCartToLocalStorage(cartItems, email);
   };
+
+  // Load cart items from local storage on login
+  useEffect(() => {
+    const cartData = JSON.parse(localStorage.getItem("cartData")) || { cartItems: [], email: "" };
+    setCartItems(cartData.cartItems || []);
+  }, []);
 
   return (
     <AuthContext.Provider

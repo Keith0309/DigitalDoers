@@ -20,6 +20,11 @@ const Cart = () => {
     setCartItems(updatedCartItems);
   };
 
+  const handleRemoveItem = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
+  };
+
   useEffect(() => {
     setisEmpty(cartItems.length === 0);
   }, [cartItems]);
@@ -79,7 +84,7 @@ const Cart = () => {
                     <td>₱{(item.price * item.quantity).toFixed(2)}</td>
                     <td>
                       {" "}
-                      <RemoveButton />
+                      <RemoveButton onRemove={() => handleRemoveItem(item.id)} />
                     </td>
                   </tr>
                 ))}

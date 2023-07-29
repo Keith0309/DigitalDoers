@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom'; // Assuming you are using React Router for navigation
+import { useAuth } from "../../AuthContext";
 import Pharmacy_Products from '../../assets/products_list/pharmacy_products';
 import { Link } from "react-router-dom";
 import './ItemDescription.css'
@@ -9,7 +10,7 @@ import DefaultLayout from '../../components/Layout/DefaultLayout/DefaultLayout';
 const ProductDescriptionPage = () => {
   const products = Pharmacy_Products();
 
-
+  const { addToCart,  cartItems, setCartItems } = useAuth();
 
   const { product_name } = useParams();
   const item = products.find((item) => item.product_name === String(product_name));
@@ -17,6 +18,17 @@ const ProductDescriptionPage = () => {
   if (!item) {
     return <div>Product not found!</div>;
   }
+
+  const handleQuantityChange = (itemId, newQuantity) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, quantity: newQuantity };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  };
+
 
     return (
 
@@ -55,11 +67,11 @@ const ProductDescriptionPage = () => {
 
           <div className='d-flex justify-content-start mt-5'>
           <div className='counter_desc'>
-          <Counter />
+          <Counter initialQuantity={item.quantity} onChange={(newQuantity) => handleQuantityChange(item.id, newQuantity)} />
           </div>
 
           <div>
-              <button className="btn add_cart_description" >Add to Cart</button>
+              <button className="btn add_cart_description" onClick={() => addToCart(item)} >Add to Cart</button>
           </div>
           </div>
 
