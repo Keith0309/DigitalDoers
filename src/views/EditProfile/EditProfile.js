@@ -8,34 +8,13 @@ import { useAuth } from "../../AuthContext";
 const EditProfile = () => {
   const { email, firstName, lastName, phoneNumber, address } = useAuth();
 
-  const [password, setPassword] = useState("*************");
-  // const [fName, setfName] = useState("David");
-  // const [lName, setlName] = useState("Mendoza");
-  // const [password, setpassword] = useState("**********");
-  // const [email, setemail] = useState("davidmendoza@gmail.com");
-  // const [phone, setphone] = useState("09359999999");
-  // const [address, setaddress] = useState(
-  //   "John Doe 123 Main Street Barangay Santisima Trinidad Malolos, Bulacan 3000 Philippines"
-  // );
+  const [fName, setfName] = useState(firstName);
+  const [lName, setlName] = useState(lastName);
+  const password = useState("**********");
+  const [Email, setEmail] = useState(email);
+  const [phone, setphone] = useState(phoneNumber);
+  const [Address, setAddress] = useState(address);
 
-  // const handlefName = (event) => {
-  //   setfName(event.target.value);
-  // };
-  // const handlelName = (event) => {
-  //   setlName(event.target.value);
-  // };
-  // const handlepassword = (event) => {
-  //   setpassword(event.target.value);
-  // };
-  // const handleemail = (event) => {
-  //   setemail(event.target.value);
-  // };
-  // const handlephone = (event) => {
-  //   setphone(event.target.value);
-  // };
-  // const handleaddress = (event) => {
-  //   setaddress(event.target.value);
-  // };
   return (
     <DefaultLayout>
       <div className="container p-0">
@@ -68,43 +47,41 @@ const EditProfile = () => {
                 <input
                   className="w-50 rounded w-50 p-4 ms-5"
                   type="text"
-                  value={firstName}
-                  // onChange={handlefName}
+                  value={fName}
+                  onChange={(event) => setfName(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Last Name</h6>
                 <input
                   className="w-50 rounded w-50 p-4 ms-5"
                   type="text"
-                  value={lastName}
-                  // onChange={handlelName}
+                  value={lName}
+                  onChange={(event) => setlName(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Password</h6>
                 <input
-                  className="w-50 rounded w-50 p-4 ms-5"
+                  className="w-50 rounded w-50 p-4 ms-5 form-control"
                   type="password"
                   value={password}
-                  // onChange={handlepassword}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Email</h6>
                 <input
                   className="w-50 rounded w-50 p-3 ms-5"
                   type="email"
-                  value={email}
-                  // onChange={handleemail}
+                  value={Email}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Phone</h6>
                 <input
                   className="w-50 rounded w-50 p-3 ms-5"
                   type="number"
-                  value={phoneNumber}
-                  // onChange={handlephone}
+                  value={phone}
+                  onChange={(event) => setphone(event.target.value)}
                 />
                 <h6 className="pt-4 fw-bold mb-4">Address</h6>
                 <textarea
                   className="w-50 rounded w-50 p-2 ms-5"
-                  type="text"
-                  value={address}
-                  // onChange={handleaddress}
+                  value={Address}
+                  onChange={(event) => setAddress(event.target.value)}
                 />
               </div>
             </div>
